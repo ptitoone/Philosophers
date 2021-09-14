@@ -6,26 +6,32 @@
 #    By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/15 16:22:01 by akotzky           #+#    #+#              #
-#    Updated: 2021/08/15 17:04:12 by akotzky          ###   ########.fr        #
+#    Updated: 2021/09/14 18:43:57 by akotzky          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	philo
 SRCS	=	$(shell echo srcs/*.c)
 OBJS	=	$(SRCS:.c=.o)
+LIBFT	=	libft.a
 
 INCLS	=	-Iincls
 
 CFLAGS	=	-Wall -Werror -Wextra
-CC		=	gcc
+CC		=	gcc -g
 
 .PHONY: all re clean fclean
 
 all : $(NAME)
 
-$(NAME) : $(OBJS)
-	$(info - Linking philo binary)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME) : $(LIBFT) $(OBJS)
+	$(info - Linking Philosophers binary)
+	@$(CC) $(CFLAGS) $(OBJS) -L . -lft -o $(NAME)
+
+$(LIBFT) :
+	@make -C ./libft all
+	@cp ./libft/incls/libft.h ./incls
+	@cp ./libft/libft.a .
 
 %.o : %.c
 	$(info - Assembling $< to $@ file...)
@@ -36,9 +42,15 @@ clean :
 	@rm -rf $(OBJS)
 
 fclean : clean
-	$(info - Cleaning Philosophers executable binary...)
+	$(info - Cleaning Philosophers binary...)
 	@rm -rf $(NAME)
+	$(info - Removing libft.a and libft.h files...)
+	@rm -rf $(LIBFT) ./incls/libft.h
+	@make -C ./libft clean
 
-re : fclean
-	$(info - Recompilong Philosophes project...)
+re : fclean echore all
+	@make -C ./libft fclean
 
+echore :
+	$(info - - - - - - - - - - - - - - - - - - -)
+	$(info - Recompilong Philosophers project...)

@@ -1,14 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: jpillet <jpillet@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 16:51:35 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/14 20:55:13 by akotzky          ###   ########.fr       */
+/*   Created: 2021/01/19 15:29:08 by jpillet           #+#    #+#             */
+/*   Updated: 2021/08/25 22:45:48 by jpillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "./libft.h"
 
+char	*ft_strrchr(const char *s, int c)
+{
+	long int	octet;
+
+	octet = ft_strlen(s);
+	while (s[octet] != (char)c && octet > -1)
+		octet--;
+	if (s[octet] == (char)c && octet > -1)
+		return ((char *)s + octet);
+	return (0);
+}

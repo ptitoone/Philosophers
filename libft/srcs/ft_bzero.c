@@ -1,14 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: jpillet <jpillet@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 16:51:35 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/14 20:55:13 by akotzky          ###   ########.fr       */
+/*   Created: 2021/01/18 13:57:26 by jpillet           #+#    #+#             */
+/*   Updated: 2021/09/06 15:05:09 by jpillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "./libft.h"
 
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	octet;
+
+	octet = 0;
+	while (octet < n)
+		((unsigned char *)s)[octet++] = 0;
+}

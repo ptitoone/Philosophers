@@ -1,14 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: jpillet <jpillet@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 16:51:35 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/14 20:55:13 by akotzky          ###   ########.fr       */
+/*   Created: 2021/01/23 16:01:49 by jpillet           #+#    #+#             */
+/*   Updated: 2021/08/25 22:45:48 by jpillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "./libft.h"
 
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*nodclear;
+
+	while (*lst && del)
+	{
+		nodclear = *lst;
+		*lst = (*lst)->next;
+		del(nodclear->content);
+		free(nodclear);
+	}
+}

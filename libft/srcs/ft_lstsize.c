@@ -1,14 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: jpillet <jpillet@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 16:51:35 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/14 20:55:13 by akotzky          ###   ########.fr       */
+/*   Created: 2021/01/23 14:33:25 by jpillet           #+#    #+#             */
+/*   Updated: 2021/08/25 22:45:48 by jpillet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "./libft.h"
 
+int	ft_lstsize(t_list *lst)
+{
+	t_list	*lstcpy;
+	int		lstsize;
+
+	lstcpy = lst;
+	lstsize = 0;
+	while (lstcpy)
+	{
+		lstcpy = lstcpy->next;
+		lstsize++;
+	}
+	return (lstsize);
+}

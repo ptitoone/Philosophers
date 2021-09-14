@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/08/15 17:13:32 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/14 21:37:41 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,47 @@
 # include <unistd.h>
 # include <sys/time.h>
 # include <pthread.h>
+# include "libft.h"
 
 # define ERR_NOT_ENOUGH_ARGS	"Error: Not enough arguments."
 # define ERR_TOO_MANY_ARGS		"Error: Too many arguments."
 # define ERR_INVALID_ARGS		"Error: Invalid arguments."
+# define ERR_INVALID_TIME		"Error: Invalid time."
+# define ERR_GET_TIME			"Error: Getting time of day failed"
 
-typedef unsigned int t_count;
+typedef short			t_status;
+typedef unsigned int	t_time;
+typedef unsigned int	t_pos;
+typedef struct s_philo	t_philo;
 
-typedef struct	s_info {
+enum	e_status
+{
+	EAT,
+	SLEEP,
+	THINK,
+	DEAD
+};
 
-	t_count	philo_count;
-	t_count	time_to_die;
-	t_count	time_to_eat;
-	t_count	time_to_sleep;
-	t_count	opt_time_to_eat;
+struct	s_philo
+{
+	pthread_t		thread;
+	t_pos			pos;
+	t_status		status;
+	t_philo			*prev;
+	t_philo			*next;
+};
 
+typedef struct	s_info
+{
+	struct timeval tv_begin;
+	t_time	philo_count;
+	t_time	time_to_die;
+	t_time	time_to_eat;
+	t_time	time_to_sleep;
+	t_time	opt_min_meals;
 }				t_info;
 
-int	throw_error(char *err_msg);
-int	ft_strlen(char *str);
+void	ph_exit(t_philo *philo, char *msg);
+void	ph_init(int ac, char **av, t_info *info, t_philo *philo);
 
 #endif
