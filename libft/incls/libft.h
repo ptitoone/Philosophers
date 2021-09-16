@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:17:52 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/16 17:44:17 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/16 21:51:34 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ t_ribool		ft_free_double_2_post(double ***ptr, int delet);
 t_ribool		ft_free_t_ribool_2_post(t_ribool ***ptr, int delet);
 
 t_ribool		ft_int_overflow(const char *src);
+t_ribool		ft_long_overflow(const char *src);
 double			ft_atof(const char *str);
 int				ft_atoi(const char *str);
 long int		ft_atol(const char *str);
@@ -116,9 +117,8 @@ int				ft_isascii(int c);
 int				ft_isdigit(int c);
 t_ribool		ft_strisdigit(char *str);
 t_ribool		ft_strisnumber(char *str);
-void			ft_itoa_init(long n, long *clclen, \
-					int *strlen, int *posinega);
-char			*ft_itoa(long n);
+char			*ft_itoa(int n);
+char			*ft_ltoa(long n);
 int				ft_isprint(int c);
 int				ft_issigned(int c);
 int				ft_isspace(int c);

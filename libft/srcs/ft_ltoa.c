@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_ltoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:32:33 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/16 21:48:00 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/16 21:53:40 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-static void	ft_itoa_init(int n, int *clclen, int *strlen, int *posinega)
+static void	ft_ltoa_init(long n, long *clclen, int *strlen, int *posinega)
 {
 	*clclen = n;
 	*posinega = 1;
@@ -23,14 +23,14 @@ static void	ft_itoa_init(int n, int *clclen, int *strlen, int *posinega)
 		*strlen = 3;
 }
 
-char	*ft_itoa(int n)
+char	*ft_ltoa(long n)
 {
 	char	*nbrstr;
-	int		clclen;
+	long	clclen;
 	int		strlen;
 	int		posinega;
 
-	ft_itoa_init(n, &clclen, &strlen, &posinega);
+	ft_ltoa_init(n, &clclen, &strlen, &posinega);
 	clclen /= 10;
 	while (clclen)
 	{

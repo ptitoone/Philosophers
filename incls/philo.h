@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/16 17:53:49 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/17 01:02:01 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define ERR_INVALID_TIME		"Error: Invalid time (max : 1000000)"
 # define ERR_GET_TIME			"Error: Getting time of day failed"
 # define ERR_INV_COUNT_RANGE	"Error: Invalid count range (min : 1 | max : 4294967295)"
+# define ERR_MALLOC				"Error: Memory allocation failed"
 
 typedef unsigned short	t_status;
 typedef unsigned int	t_time;
@@ -47,7 +48,6 @@ struct	s_philo
 	pthread_t		thread;
 	t_pos			pos;
 	t_status		status;
-	t_philo			*prev;
 	t_philo			*next;
 };
 
@@ -62,7 +62,7 @@ typedef struct	s_info
 	t_count	opt_min_meals;
 }				t_info;
 
-void	ph_exit(t_philo *philo, char *msg);
-void	ph_init(int ac, char **av, t_info *info, t_philo *philo);
+void	ph_exit(t_philo **philo, char *msg);
+void	ph_init(int ac, char **av, t_info *info, t_philo **philo);
 
 #endif

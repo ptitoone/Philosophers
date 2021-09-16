@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/16 17:59:04 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/17 01:03:53 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static void	init_info(int ac, char **av, t_info *info)
 {
-	int		i;
-	unsigned int 	num;
+	int			i;
+	long long	num;
 
 	i = -1;
 	if (gettimeofday(&(info->tv_begin), NULL))
@@ -23,10 +23,10 @@ static void	init_info(int ac, char **av, t_info *info)
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);
-		if (ft_int_overflow(av[i]) || num <= 0)
-			ph_exit(NULL, ERR_INV_COUNT_RANGE);
-		if ((i >= 1 && i <= 3) &&  num > 1000000)
+		if ((i >= 1 && i <= 3) && (num > 1000000 || ft_long_overflow(av[i])))
 			ph_exit(NULL, ERR_INVALID_TIME);
+		if (ft_long_overflow(av[i]) || (num <= 0 || num > 4294967295))
+			ph_exit(NULL, ERR_INV_COUNT_RANGE);
 		if (i == 0)
 			info->philo_count = num;
 		else if (i == 1)
@@ -41,11 +41,36 @@ static void	init_info(int ac, char **av, t_info *info)
 	info->forks = info->philo_count;
 }
 
-static void	init_philos(t_info *info, t_philo *philo)
+static t_philo	*new_philo(int pos)
 {
+	t_philo	*new;
+
+	new = (t_philo *)malloc(1 * sizeof(t_philo));
+	if (new)
+	{
+		new->pos = pos;
+		new->status = THINK;
+		new->next = NULL;
+	}
+	return (new);
 }
 
-void	ph_init(int ac, char **av, t_info *info, t_philo *philo)
+static void	init_philos(t_info *info, t_philo **head)
+{
+	int		i;
+	t_philo	*browse;
+
+	i = 0;
+	*head = new_philo(i);
+	browse = *head;
+	while (++i < info->philo_count)
+	{
+		browse->next = new_philo(i);
+		browse = browse->next;
+	}
+}
+
+void	ph_init(int ac, char **av, t_info *info, t_philo **philo)
 {
 	ph_exit(philo, NULL);
 	if (ac < 4)
@@ -53,4 +78,5 @@ void	ph_init(int ac, char **av, t_info *info, t_philo *philo)
 	else if (ac > 5)
 		ph_exit(NULL, ERR_TOO_MANY_ARGS);
 	init_info(ac, av, info);
+	init_philos(info, philo);
 }
