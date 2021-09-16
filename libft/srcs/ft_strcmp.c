@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpillet <jpillet@student.42-nice.fr>       +#+  +:+       +#+        */
+/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/30 22:38:35 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/13 00:03:00 by jpillet          ###   ########.fr       */
+/*   Created: 2021/09/16 13:33:07 by akotzky           #+#    #+#             */
+/*   Updated: 2021/09/16 14:10:26 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp(char const *s1, char const *s2)
+int	ft_strcmp(char const *s1, char const *s2)
 {
 	while (*s1 && *s2 && *s1 == *s2)
 	{

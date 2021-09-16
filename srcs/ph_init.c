@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/14 21:39:12 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/16 14:32:32 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	init_info(int ac, char **av, t_info *info)
 	while (++i < ac && av[i])
 	{
 		time = ft_atoi(av[i]);
-		if (time <= 0 || time >= 1000000 || ft_int_overflow(av[i]))
+		if (time <= 0 || time > 1000000 || ft_int_overflow(av[i]))
 			ph_exit(NULL, ERR_INVALID_TIME);
 		if (i == 0)
 		   info->philo_count = time;

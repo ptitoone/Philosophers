@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_handle_conv.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpillet <jpillet@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/02 08:50:01 by akotzky           #+#    #+#             */
-/*   Updated: 2021/08/28 21:02:51 by jpillet          ###   ########.fr       */
+/*   Created: 2021/09/16 13:32:50 by akotzky           #+#    #+#             */
+/*   Updated: 2021/09/16 13:32:50 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

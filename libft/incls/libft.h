@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpillet <jpillet@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 16:33:11 by jpillet           #+#    #+#             */
-/*   Updated: 2021/09/14 19:32:59 by akotzky          ###   ########.fr       */
+/*   Created: 2021/09/16 14:17:52 by akotzky           #+#    #+#             */
+/*   Updated: 2021/09/16 14:26:31 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,10 +100,10 @@ t_ribool		ft_free_float_2_post(float ***ptr, int delet);
 t_ribool		ft_free_double_2_post(double ***ptr, int delet);
 t_ribool		ft_free_t_ribool_2_post(t_ribool ***ptr, int delet);
 
+t_ribool		ft_int_overflow(const char *src);
 double			ft_atof(const char *str);
 int				ft_atoi(const char *str);
 long int		ft_atol(const char *str);
-t_ribool		ft_int_overflow(const char *src);
 void			ft_bzero(void *s, size_t n);
 t_ribool		ft_calloc(size_t count, size_t size, void *ptr);
 void			*fr_realloc(void *ptr, size_t size);
