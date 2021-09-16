@@ -6,13 +6,13 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:32:33 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/16 13:32:33 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/16 17:43:12 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-void	ft_itoa_init(int n, int *clclen, int *strlen, int *posinega)
+void	ft_itoa_init(long n, long *clclen, int *strlen, int *posinega)
 {
 	*clclen = n;
 	*posinega = 1;
@@ -23,10 +23,10 @@ void	ft_itoa_init(int n, int *clclen, int *strlen, int *posinega)
 		*strlen = 3;
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long n)
 {
 	char	*nbrstr;
-	int		clclen;
+	long	clclen;
 	int		strlen;
 	int		posinega;
 

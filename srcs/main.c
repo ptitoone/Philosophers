@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/14 21:18:44 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/16 18:01:42 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 
 void	print_info(t_info info)
 {
-	ft_printf("philo_count = %i\n", info.philo_count);
-	ft_printf("time_to_die = %i\n", info.time_to_die);
-	ft_printf("time_to_eat = %i\n", info.time_to_eat);
-	ft_printf("time_to_sleep = %i\n", info.time_to_sleep);
-	ft_printf("opt_diners = %i\n", info.opt_min_meals);
+	ft_printf("philo_count = %u\n", info.philo_count);
+	ft_printf("time_to_die = %u\n", info.time_to_die);
+	ft_printf("time_to_eat = %u\n", info.time_to_eat);
+	ft_printf("time_to_sleep = %u\n", info.time_to_sleep);
+	ft_printf("opt_diners = %u\n", info.opt_min_meals);
 }
 
 ///////////////////////////

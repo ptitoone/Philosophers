@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:17:52 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/16 14:26:31 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/16 17:44:17 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,9 +116,9 @@ int				ft_isascii(int c);
 int				ft_isdigit(int c);
 t_ribool		ft_strisdigit(char *str);
 t_ribool		ft_strisnumber(char *str);
-void			ft_itoa_init(int n, int *clclen, \
+void			ft_itoa_init(long n, long *clclen, \
 					int *strlen, int *posinega);
-char			*ft_itoa(int n);
+char			*ft_itoa(long n);
 int				ft_isprint(int c);
 int				ft_issigned(int c);
 int				ft_isspace(int c);
@@ -147,7 +147,6 @@ void			ft_strrev(char *str);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 char			**ft_split(char const *s, char c);
-char			*ft_itoa(int n);
 char			*ft_strjoin(char const *s1, char const *s2);
 t_ribool		ft_strjoin_all(int ac, char **av, char c, char **str);
 t_ribool		ft_strjoin_all_malloc(int ac, char **av, char c, char **str);
