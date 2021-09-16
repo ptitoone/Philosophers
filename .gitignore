@@ -2,7 +2,7 @@
 *.d
 
 # Libft copied header
-./incls/libft.h
+incls/libft.h
 
 # Object files
 *.o
