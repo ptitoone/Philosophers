@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/17 01:03:10 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/28 17:45:31 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,11 @@ int	main(int ac, char **av)
 	
 	print_info(info, philo);
 	ft_printf("Microseconds esplaced: %i\n", info.tv_begin.tv_usec);
-
+	while ()
+	{
+	
+	
+	}
 	ph_exit(&philo, NULL);
 	return (0);
 }

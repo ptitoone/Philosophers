@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/17 01:03:53 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/09/28 17:18:20 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ static t_philo	*new_philo(int pos)
 		new->status = THINK;
 		new->next = NULL;
 	}
+	else
+		ph_exit(NULL, ERR_MALLOC);
 	return (new);
 }
 
