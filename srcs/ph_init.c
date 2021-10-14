@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/17 01:03:53 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/14 15:46:51 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,11 @@ static void	init_info(int ac, char **av, t_info *info)
 	i = -1;
 	if (gettimeofday(&(info->tv_begin), NULL))
 		ph_exit(NULL, ERR_GET_TIME);
+	pthread_mutex_init(&info->lock, NULL);
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);
-		if ((i >= 1 && i <= 3) && (num > 1000000 || ft_long_overflow(av[i])))
-			ph_exit(NULL, ERR_INVALID_TIME);
-		if (ft_long_overflow(av[i]) || (num <= 0 || num > 4294967295))
+		if (ft_long_overflow(av[i]) || (num <= 0 || num > UINT_MAX))
 			ph_exit(NULL, ERR_INV_COUNT_RANGE);
 		if (i == 0)
 			info->philo_count = num;
@@ -49,6 +48,7 @@ static t_philo	*new_philo(int pos)
 	if (new)
 	{
 		new->pos = pos;
+		new->time_left = 0;
 		new->status = THINK;
 		new->next = NULL;
 	}
@@ -61,11 +61,11 @@ static void	init_philos(t_info *info, t_philo **head)
 	t_philo	*browse;
 
 	i = 0;
-	*head = new_philo(i);
+	*head = new_philo(i + 1);
 	browse = *head;
 	while (++i < info->philo_count)
 	{
-		browse->next = new_philo(i);
+		browse->next = new_philo(i + 1);
 		browse = browse->next;
 	}
 }
