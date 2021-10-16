@@ -6,73 +6,82 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/14 16:10:13 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/16 16:34:20 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-static void	*ph_eat(void *time_left)
+void	*act_die(void *fork)
 {
-	struct timeval	tv_start;
-	struct timeval	tv_current;
-	t_time			usec;
+	static int *time;
 
-	while (*(t_time *)time_left > 0)
-	{
-		gettimeofday(&tv_start, NULL);
-		gettimeofday(&tv_current, NULL);
-		usec = tv_current.tv_usec - tv_start.tv_usec;
-		while (usec < 1000)
-		{
-			gettimeofday(&tv_start, NULL);
-			gettimeofday(&tv_current, NULL);
-			usec += tv_current.tv_usec - tv_start.tv_usec;
-		}
-		//printf("time = %i\n", *(t_time *)time_left );
-		*(t_time *)time_left -= 1;
-	}
-	printf("Done\n");
+	if (!time)
+		time = (int *)fork;
+	else
+		usleep(*(t_time *)time * 1000);
 	return (NULL);
 }
 
-static void	*ph_eat_2(void *time_left)
+void	*act_eat(void *fork)
 {
-	struct timeval	tv_start;
-	struct timeval	tv_current;
-	t_time			usec;
+	static int *time;
 
-	while (*(t_time *)time_left > 0)
+	if (!time)
+		time = (int *)fork;
+	else
 	{
-		gettimeofday(&tv_start, NULL);
-		gettimeofday(&tv_current, NULL);
-		usec = tv_current.tv_usec - tv_start.tv_usec;
-		while (usec < 1000)
-		{
-			gettimeofday(&tv_start, NULL);
-			gettimeofday(&tv_current, NULL);
-			usec += tv_current.tv_usec - tv_start.tv_usec;
-		}
-		*(t_time *)time_left -= 1;
+		pthread_mutex_lock(fork);
+		usleep(*(t_time *)time * 1000);
+		pthread_mutex_unlock(fork);
 	}
-	printf("Done\n");
 	return (NULL);
 }
 
-void	ph_spawn(t_philo *philo, t_info *info)
+void	*act_sleep(void *fork)
 {
-	t_philo	*browse;
+	static int *time;
+
+	if (!time)
+		time = (int *)fork;
+	else
+		usleep(*(t_time *)time * 1000);
+	return (NULL);
+}
+
+void	*print_msg(void *philo)
+{
+	static pthread_mutex_t	*lock;
+	static t_info			*info;
+
+	if (!lock)
+		lock = philo;
+	else if (!info)
+		info = philo;
+	else
+	{
+		pthread_mutex_lock(lock);
+		if (((t_philo *)philo)->status == EAT)
+			printf("%.3f %i is eating\n", get_current_time_ms(info), ((t_philo *)philo)->pos); 
+		else if (((t_philo *)philo)->status == SLEEP)
+			printf("%.3f %i is sleeping\n", get_current_time_ms(info), ((t_philo *)philo)->pos); 
+		else if (((t_philo *)philo)->status == THINK)
+			printf("%.3f %i is thinking\n", get_current_time_ms(info), ((t_philo *)philo)->pos); 
+		pthread_mutex_unlock(lock);
+	}
+	return (NULL);
+}
+
+void	lifecycle(t_philo *philo, t_info *info)
+{
+	t_philo			*browse;
 
 	browse = philo;
 	while (browse)
 	{
-		printf("%.3f %i is eating\n", get_current_time_ms(info), browse->pos);
-		browse->time_left = info->time_to_eat;
-		if (browse->pos % 2)
-			pthread_create(&browse->thread, NULL,
-				ph_eat, (void *)&(browse->time_left));
+		print_msg((void *)browse);
 		pthread_create(&browse->thread, NULL,
-			ph_eat_2, (void *)&(browse->time_left));
+			act_eat, (void *)(&info->time_to_eat));
 		pthread_join(browse->thread, NULL);
 		browse = browse->next;
 	}

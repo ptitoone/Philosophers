@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/14 15:46:51 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/16 16:36:40 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	init_info(int ac, char **av, t_info *info)
 	i = -1;
 	if (gettimeofday(&(info->tv_begin), NULL))
 		ph_exit(NULL, ERR_GET_TIME);
-	pthread_mutex_init(&info->lock, NULL);
+	pthread_mutex_init(&info->print_msg, NULL);
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);
@@ -47,10 +47,11 @@ static t_philo	*new_philo(int pos)
 	new = (t_philo *)malloc(1 * sizeof(t_philo));
 	if (new)
 	{
+		pthread_mutex_init(&new->fork, NULL);
 		new->pos = pos;
-		new->time_left = 0;
 		new->status = THINK;
 		new->next = NULL;
+		new->time_left = (t_time *)malloc(1 * sizeof(t_time));
 	}
 	return (new);
 }
@@ -70,7 +71,7 @@ static void	init_philos(t_info *info, t_philo **head)
 	}
 }
 
-void	ph_init(int ac, char **av, t_info *info, t_philo **philo)
+void	init(int ac, char **av, t_info *info, t_philo **philo)
 {
 	ph_exit(philo, NULL);
 	if (ac < 4)
@@ -78,5 +79,9 @@ void	ph_init(int ac, char **av, t_info *info, t_philo **philo)
 	else if (ac > 5)
 		ph_exit(NULL, ERR_TOO_MANY_ARGS);
 	init_info(ac, av, info);
+	act_die(&info->time_to_die);
+	act_eat(&info->time_to_eat);
+	act_sleep(&info->time_to_sleep);
+	print_msg(&info->print_msg);
 	init_philos(info, philo);
 }

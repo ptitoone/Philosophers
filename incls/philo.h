@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/14 15:42:56 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/16 16:38:28 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,17 @@ enum	e_status
 struct	s_philo
 {
 	pthread_t		thread;
+	pthread_mutex_t	fork;
 	t_pos			pos;
-	t_time			time_left;
 	t_status		status;
+	t_time			*time_left;
 	t_philo			*next;
 };
 
 typedef struct	s_info
 {
 	struct timeval	tv_begin;
-	pthread_mutex_t	lock;
+	pthread_mutex_t	print_msg;
 	t_count			philo_count;
 	t_count			forks;
 	t_time			time_to_die;
@@ -65,9 +66,14 @@ typedef struct	s_info
 }				t_info;
 
 void	ph_exit(t_philo **philo, char *msg);
-void	ph_init(int ac, char **av, t_info *info, t_philo **philo);
-void	ph_spawn(t_philo *philo, t_info *info);
+void	init(int ac, char **av, t_info *info, t_philo **philo);
+void	lifecycle(t_philo *philo, t_info *info);
 
 double	get_current_time_ms(t_info *info);
+
+void	*print_msg(void *philo);
+void	*act_die(void *fork);
+void	*act_eat(void *fork);
+void	*act_sleep(void *fork);
 
 #endif

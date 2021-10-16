@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/14 15:44:20 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/16 16:37:40 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,14 @@ void	print_info(t_info info, t_philo *philo)
 
 int	main(int ac, char **av)
 {
-	t_info	info;
-	t_philo	*philo;
+	t_info			info;
+	t_philo			*philo;
 	
-	ph_init(ac - 1, av + 1, &info, &philo);
-	
-	print_info(info, philo);
-//	for (int i = 0; i < 1000; i++)
-//		printf("Microseconds esplaced: %.3f\n", get_current_time_ms(&info));
+	init(ac - 1, av + 1, &info, &philo);
 
-	ph_spawn(philo, &info);
+	print_info(info, philo); /*DEBUG*/
+
+	lifecycle(philo, &info);
 	ph_exit(&philo, NULL);
 	return (0);
 }
