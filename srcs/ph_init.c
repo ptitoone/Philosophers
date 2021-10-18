@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/18 09:28:17 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/18 13:10:16 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	init_info(int ac, char **av, t_info *info)
 	i = -1;
 	if (gettimeofday(&(info->tv_begin), NULL))
 		ph_exit(NULL, ERR_GET_TIME);
-	pthread_mutex_init(&info->print_msg, NULL);
+	pthread_mutex_init(&info->msg_lock, NULL);
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);
@@ -37,7 +37,6 @@ static void	init_info(int ac, char **av, t_info *info)
 		else if (i == 4)
 			info->opt_min_meals = num;
 	}
-	info->forks = info->philo_count;
 }
 
 static t_philo	*new_philo(int pos)
@@ -49,7 +48,6 @@ static t_philo	*new_philo(int pos)
 	{
 		pthread_mutex_init(&new->fork, NULL);
 		new->pos = pos;
-		new->status = THINK;
 		new->next = NULL;
 		new->time_left = (t_time *)malloc(1 * sizeof(t_time));
 	}
@@ -71,6 +69,7 @@ static void	init_philos(t_info *info, t_philo **head)
 		browse->next = new_philo(i + 1);
 		browse = browse->next;
 	}
+	browse->next = *head;
 }
 
 void	init(int ac, char **av, t_info *info, t_philo **philo)
@@ -81,9 +80,7 @@ void	init(int ac, char **av, t_info *info, t_philo **philo)
 	else if (ac > 5)
 		ph_exit(NULL, ERR_TOO_MANY_ARGS);
 	init_info(ac, av, info);
-	act_die(&info->time_to_die);
-	act_eat(&info->time_to_eat);
-	act_sleep(&info->time_to_sleep);
-	print_msg(&info->print_msg);
+	lifecycle(info);
+	print_msg(0, 0, info);
 	init_philos(info, philo);
 }

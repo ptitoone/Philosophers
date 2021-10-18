@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/18 09:29:10 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/18 13:20:35 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 void	print_info(t_info info, t_philo *philo)
 {
 	int i = -1;
+	t_philo	*browse = philo;
 
 	ft_printf("philo_count = %u\n", info.philo_count);
 	ft_printf("time_to_die = %u\n", info.time_to_die);
@@ -33,16 +34,35 @@ void	print_info(t_info info, t_philo *philo)
 
 ///////////////////////////
 
+void	*spawn(void *philo)
+{
+	t_philo	*browse;
+	int		i;
+
+	i = 0;
+	browse = (t_philo *)philo;
+	while (++i < 5)
+	{
+		pthread_create(&browse->thread, NULL, lifecycle, (void *)browse);
+		browse = browse->next;
+	}
+	while (1){}
+	return (NULL);
+}
+
 int	main(int ac, char **av)
 {
-	t_info			info;
-	t_philo			*philo;
+	t_info		info;
+	t_philo		*philo;
+	pthread_t	spn;
 	
 	init(ac - 1, av + 1, &info, &philo);
 
 	print_info(info, philo); /*DEBUG*/
 
-	lifecycle(philo, &info);
+	pthread_create(&spn, NULL, spawn, (void *)philo);
+	pthread_join(spn, NULL);
+
 	ph_exit(&philo, NULL);
 	return (0);
 }
