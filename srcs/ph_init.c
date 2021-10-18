@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/09/28 17:18:20 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/18 09:28:17 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,11 @@ static void	init_info(int ac, char **av, t_info *info)
 	i = -1;
 	if (gettimeofday(&(info->tv_begin), NULL))
 		ph_exit(NULL, ERR_GET_TIME);
+	pthread_mutex_init(&info->print_msg, NULL);
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);
-		if ((i >= 1 && i <= 3) && (num > 1000000 || ft_long_overflow(av[i])))
-			ph_exit(NULL, ERR_INVALID_TIME);
-		if (ft_long_overflow(av[i]) || (num <= 0 || num > 4294967295))
+		if (ft_long_overflow(av[i]) || (num <= 0 || num > UINT_MAX))
 			ph_exit(NULL, ERR_INV_COUNT_RANGE);
 		if (i == 0)
 			info->philo_count = num;
@@ -48,9 +47,11 @@ static t_philo	*new_philo(int pos)
 	new = (t_philo *)malloc(1 * sizeof(t_philo));
 	if (new)
 	{
+		pthread_mutex_init(&new->fork, NULL);
 		new->pos = pos;
 		new->status = THINK;
 		new->next = NULL;
+		new->time_left = (t_time *)malloc(1 * sizeof(t_time));
 	}
 	else
 		ph_exit(NULL, ERR_MALLOC);
@@ -63,16 +64,16 @@ static void	init_philos(t_info *info, t_philo **head)
 	t_philo	*browse;
 
 	i = 0;
-	*head = new_philo(i);
+	*head = new_philo(i + 1);
 	browse = *head;
 	while (++i < info->philo_count)
 	{
-		browse->next = new_philo(i);
+		browse->next = new_philo(i + 1);
 		browse = browse->next;
 	}
 }
 
-void	ph_init(int ac, char **av, t_info *info, t_philo **philo)
+void	init(int ac, char **av, t_info *info, t_philo **philo)
 {
 	ph_exit(philo, NULL);
 	if (ac < 4)
@@ -80,5 +81,9 @@ void	ph_init(int ac, char **av, t_info *info, t_philo **philo)
 	else if (ac > 5)
 		ph_exit(NULL, ERR_TOO_MANY_ARGS);
 	init_info(ac, av, info);
+	act_die(&info->time_to_die);
+	act_eat(&info->time_to_eat);
+	act_sleep(&info->time_to_sleep);
+	print_msg(&info->print_msg);
 	init_philos(info, philo);
 }
