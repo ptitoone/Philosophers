@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/18 13:10:16 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/18 18:21:16 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ static t_philo	*new_philo(int pos)
 		pthread_mutex_init(&new->fork, NULL);
 		new->pos = pos;
 		new->next = NULL;
-		new->time_left = (t_time *)malloc(1 * sizeof(t_time));
 	}
 	else
 		ph_exit(NULL, ERR_MALLOC);
@@ -80,7 +79,7 @@ void	init(int ac, char **av, t_info *info, t_philo **philo)
 	else if (ac > 5)
 		ph_exit(NULL, ERR_TOO_MANY_ARGS);
 	init_info(ac, av, info);
+	spawn(info);
 	lifecycle(info);
-	print_msg(0, 0, info);
 	init_philos(info, philo);
 }

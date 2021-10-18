@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/18 13:07:41 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/18 18:22:08 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ struct	s_philo
 	pthread_t		thread;
 	pthread_mutex_t	fork;
 	t_pos			pos;
-	t_time			*time_left;
+	double			time_last_meal;
 	t_philo			*next;
 };
 
@@ -67,6 +67,7 @@ typedef struct	s_info
 void	ph_exit(t_philo **philo, char *msg);
 void	init(int ac, char **av, t_info *info, t_philo **philo);
 void	*lifecycle(void *philo);
+void	*spawn(void *philo);
 
 double	get_current_time_ms(t_info *info);
 
