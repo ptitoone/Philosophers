@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/18 18:25:26 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 11:45:24 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	print_info(t_info info, t_philo *philo)
 }
 
 ///////////////////////////
-
+int	lock_start = 0;
 void	*spawn(void *philo)
 {
 	t_philo			*browse;
@@ -50,10 +50,11 @@ void	*spawn(void *philo)
 		ft_printf("\n\t\t=== START LIFECYCLE ===\n");
 		while (++i < info->philo_count)
 		{
-			browse->time_last_meal = get_current_time_ms(info);
 			pthread_create(&browse->thread, NULL, lifecycle, (void *)browse);
 			browse = browse->next;
 		}
+		gettimeofday(&(info->tv_begin), NULL);
+		lock_start = 1;
 		while (1){}
 	}
 	return (NULL);

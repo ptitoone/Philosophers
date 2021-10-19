@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/18 18:11:04 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 13:10:50 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,23 @@ void	*lifecycle(void *philo)
 		info = philo;
 	else
 	{
+		while(!lock_start){}
 		while (1)
 		{
 			pthread_mutex_lock(&((t_philo *)philo)->fork);
+			print_msg(((t_philo *)philo)->pos, FORK, info);	
 			pthread_mutex_lock(&((t_philo *)philo)->next->fork);
 			print_msg(((t_philo *)philo)->pos, FORK, info);	
 			print_msg(((t_philo *)philo)->pos, EAT, info);
+			usleep(info->time_to_eat * 1000);
 			printf("\t [DEBUG] philo %i last meal = %.3f \n", ((t_philo *)philo)->pos, ((t_philo *)philo)->time_last_meal);
-			printf("\t [DEBUG] philo %i diff current - last meal = %.3f \n", ((t_philo *)philo)->pos, (t_time)get_current_time_ms(info) - ((t_philo *)philo)->time_last_meal);
+			printf("\t [DEBUG] philo %i diff current - last meal = %.3f \n", ((t_philo *)philo)->pos, get_current_time_ms(info) - ((t_philo *)philo)->time_last_meal);
 			if ((get_current_time_ms(info) - ((t_philo *)philo)->time_last_meal)  >= (double)info->time_to_die)
 			{
 				print_msg(((t_philo *)philo)->pos, DEAD, info);
 				ph_exit(0, 0);
 			}
 			((t_philo *)philo)->time_last_meal = get_current_time_ms(info);
-			usleep(info->time_to_eat * 1000);
 			pthread_mutex_unlock(&((t_philo *)philo)->fork);
 			pthread_mutex_unlock(&((t_philo *)philo)->next->fork);
 			print_msg(((t_philo *)philo)->pos, SLEEP, info);

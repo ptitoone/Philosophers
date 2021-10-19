@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/18 18:22:08 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 13:11:55 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ enum	e_status
 	THINK,
 	DEAD
 };
+
+extern int lock_start;
 
 struct	s_philo
 {
