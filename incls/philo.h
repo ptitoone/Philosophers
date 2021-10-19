@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/19 13:11:55 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 17:35:32 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ typedef unsigned int	t_pos;
 typedef unsigned int	t_count;
 typedef struct s_philo	t_philo;
 
+extern pthread_t	spn;
+
 enum	e_status
 {
 	EAT,
@@ -44,14 +46,13 @@ enum	e_status
 	DEAD
 };
 
-extern int lock_start;
-
 struct	s_philo
 {
 	pthread_t		thread;
 	pthread_mutex_t	fork;
+	t_status		status;
 	t_pos			pos;
-	double			time_last_meal;
+	int				time_last_meal;
 	t_philo			*next;
 };
 
@@ -71,8 +72,8 @@ void	init(int ac, char **av, t_info *info, t_philo **philo);
 void	*lifecycle(void *philo);
 void	*spawn(void *philo);
 
-double	get_current_time_ms(t_info *info);
+int		get_current_time_ms(t_info *info);
 
-void	print_msg(t_pos pos, int msg, t_info *info);
+void	print_msg(t_pos pos, char *msg, t_info *info);
 
 #endif

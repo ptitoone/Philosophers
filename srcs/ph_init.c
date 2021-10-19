@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/19 11:32:53 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 17:35:32 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ static void	init_info(int ac, char **av, t_info *info)
 	long long	num;
 
 	i = -1;
-	if (gettimeofday(&(info->tv_begin), NULL))
-		ph_exit(NULL, ERR_GET_TIME);
 	pthread_mutex_init(&info->msg_lock, NULL);
 	while (++i < ac && av[i])
 	{

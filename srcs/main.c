@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/19 11:45:24 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 17:28:52 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ void	print_info(t_info info, t_philo *philo)
 		philo = philo->next;
 	}
 }
-
 ///////////////////////////
-int	lock_start = 0;
 void	*spawn(void *philo)
 {
 	t_philo			*browse;
@@ -47,18 +45,19 @@ void	*spawn(void *philo)
 	{
 		i = 0;
 		browse = (t_philo *)philo;
-		ft_printf("\n\t\t=== START LIFECYCLE ===\n");
 		while (++i < info->philo_count)
 		{
+			if (i == 1)
+				gettimeofday(&(info->tv_begin), NULL);
 			pthread_create(&browse->thread, NULL, lifecycle, (void *)browse);
+			usleep(500);
 			browse = browse->next;
 		}
-		gettimeofday(&(info->tv_begin), NULL);
-		lock_start = 1;
 		while (1){}
 	}
 	return (NULL);
 }
+
 
 int	main(int ac, char **av)
 {
@@ -68,8 +67,7 @@ int	main(int ac, char **av)
 	
 	init(ac - 1, av + 1, &info, &philo);
 
-	print_info(info, philo); /*DEBUG*/
-	usleep(1000000);
+//	print_info(info, philo); /*DEBUG*/
 	pthread_create(&spn, NULL, spawn, (void *)philo);
 	pthread_join(spn, NULL);
 

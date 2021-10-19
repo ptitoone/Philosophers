@@ -1,0 +1,699 @@
+		=== DEBUG INFOS ===
+philo_count = 10
+time_to_die = 800
+time_to_eat = 200
+time_to_sleep = 200
+opt_diners = 3989363072
+
+Philo number = 1
+Philo number = 2
+Philo number = 3
+Philo number = 4
+Philo number = 5
+Philo number = 6
+Philo number = 7
+Philo number = 8
+Philo number = 9
+Philo number = 10
+
+		=== START LIFECYCLE ===
+282 ms 1 has taken a fork
+282 ms 1 has taken a fork
+282 ms 1 is eating
+287 ms 3 has taken a fork
+287 ms 3 has taken a fork
+287 ms 3 is eating
+292 ms 5 has taken a fork
+292 ms 5 has taken a fork
+292 ms 5 is eating
+297 ms 7 has taken a fork
+297 ms 7 has taken a fork
+297 ms 7 is eating
+303 ms 9 has taken a fork
+303 ms 9 has taken a fork
+303 ms 9 is eating
+	 [DEBUG] philo 1 last meal = 0.000 
+	 [DEBUG] philo 1 diff current - last meal = 486.732 
+487 ms 1 is sleeping
+487 ms 2 has taken a fork
+	 [DEBUG] philo 3 last meal = 0.000 
+	 [DEBUG] philo 3 diff current - last meal = 491.944 
+492 ms 3 is sleeping
+492 ms 4 has taken a fork
+492 ms 2 has taken a fork
+492 ms 2 is eating
+	 [DEBUG] philo 5 last meal = 0.000 
+	 [DEBUG] philo 5 diff current - last meal = 497.252 
+497 ms 5 is sleeping
+497 ms 4 has taken a fork
+497 ms 4 is eating
+497 ms 6 has taken a fork
+	 [DEBUG] philo 7 last meal = 0.000 
+	 [DEBUG] philo 7 diff current - last meal = 502.526 
+503 ms 7 is sleeping
+503 ms 8 has taken a fork
+503 ms 6 has taken a fork
+503 ms 6 is eating
+	 [DEBUG] philo 9 last meal = 0.000 
+	 [DEBUG] philo 9 diff current - last meal = 507.340 
+507 ms 9 is sleeping
+507 ms 8 has taken a fork
+507 ms 8 is eating
+692 ms 1 is thinking
+692 ms 1 has taken a fork
+697 ms 3 is thinking
+	 [DEBUG] philo 2 last meal = 0.000 
+	 [DEBUG] philo 2 diff current - last meal = 697.003 
+697 ms 2 is sleeping
+697 ms 1 has taken a fork
+697 ms 1 is eating
+697 ms 3 has taken a fork
+	 [DEBUG] philo 4 last meal = 0.000 
+	 [DEBUG] philo 4 diff current - last meal = 702.300 
+702 ms 5 is thinking
+702 ms 5 has taken a fork
+702 ms 3 has taken a fork
+702 ms 3 is eating
+702 ms 4 is sleeping
+703 ms 7 is thinking
+	 [DEBUG] philo 6 last meal = 0.000 
+	 [DEBUG] philo 6 diff current - last meal = 707.358 
+707 ms 5 has taken a fork
+707 ms 6 is sleeping
+	 [DEBUG] philo 8 last meal = 0.000 
+	 [DEBUG] philo 8 diff current - last meal = 707.389 
+707 ms 8 is sleeping
+707 ms 7 has taken a fork
+707 ms 7 has taken a fork
+707 ms 7 is eating
+707 ms 5 is eating
+708 ms 9 is thinking
+708 ms 9 has taken a fork
+708 ms 9 has taken a fork
+708 ms 9 is eating
+	 [DEBUG] philo 1 last meal = 486.733 
+	 [DEBUG] philo 1 diff current - last meal = 412.404 
+899 ms 1 is sleeping
+899 ms 2 is thinking
+899 ms 2 has taken a fork
+	 [DEBUG] philo 3 last meal = 491.945 
+	 [DEBUG] philo 3 diff current - last meal = 415.394 
+907 ms 4 is thinking
+907 ms 3 is sleeping
+907 ms 4 has taken a fork
+907 ms 2 has taken a fork
+907 ms 2 is eating
+907 ms 6 is thinking
+	 [DEBUG] philo 9 last meal = 507.342 
+	 [DEBUG] philo 9 diff current - last meal = 400.241 
+908 ms 9 is sleeping
+909 ms 8 is thinking
+	 [DEBUG] philo 5 last meal = 497.253 
+	 [DEBUG] philo 5 diff current - last meal = 411.907 
+	 [DEBUG] philo 7 last meal = 502.527 
+	 [DEBUG] philo 7 diff current - last meal = 406.635 
+909 ms 7 is sleeping
+909 ms 8 has taken a fork
+909 ms 8 has taken a fork
+909 ms 8 is eating
+909 ms 5 is sleeping
+909 ms 4 has taken a fork
+909 ms 4 is eating
+909 ms 6 has taken a fork
+909 ms 6 has taken a fork
+909 ms 6 is eating
+1104 ms 1 is thinking
+1104 ms 1 has taken a fork
+1112 ms 3 is thinking
+	 [DEBUG] philo 2 last meal = 697.004 
+	 [DEBUG] philo 2 diff current - last meal = 415.374 
+1112 ms 2 is sleeping
+	 [DEBUG] philo 6 last meal = 707.360 
+	 [DEBUG] philo 6 diff current - last meal = 405.035 
+	 [DEBUG] philo 8 last meal = 707.390 
+1112 ms 1 has taken a fork
+	 [DEBUG] philo 8 diff current - last meal = 405.018 
+	 [DEBUG] philo 4 last meal = 702.301 
+	 [DEBUG] philo 4 diff current - last meal = 410.121 
+1112 ms 1 is eating
+1112 ms 3 has taken a fork
+1112 ms 3 has taken a fork
+1112 ms 6 is sleeping
+1112 ms 5 is thinking
+1112 ms 9 is thinking
+1112 ms 8 is sleeping
+1112 ms 9 has taken a fork
+1112 ms 3 is eating
+1112 ms 9 has taken a fork
+1112 ms 5 has taken a fork
+1112 ms 9 is eating
+1112 ms 4 is sleeping
+1112 ms 5 has taken a fork
+1112 ms 5 is eating
+1112 ms 7 is thinking
+1112 ms 7 has taken a fork
+1112 ms 7 has taken a fork
+1112 ms 7 is eating
+1317 ms 6 is thinking
+	 [DEBUG] philo 5 last meal = 909.161 
+1317 ms 4 is thinking
+	 [DEBUG] philo 1 last meal = 899.138 
+	 [DEBUG] philo 1 diff current - last meal = 418.303 
+	 [DEBUG] philo 5 diff current - last meal = 408.234 
+	 [DEBUG] philo 3 last meal = 907.340 
+	 [DEBUG] philo 3 diff current - last meal = 410.112 
+	 [DEBUG] philo 7 last meal = 909.163 
+	 [DEBUG] philo 7 diff current - last meal = 408.296 
+	 [DEBUG] philo 9 last meal = 907.584 
+	 [DEBUG] philo 9 diff current - last meal = 409.883 
+1317 ms 2 is thinking
+1317 ms 2 has taken a fork
+1317 ms 2 has taken a fork
+1317 ms 2 is eating
+1317 ms 1 is sleeping
+1317 ms 3 is sleeping
+1317 ms 7 is sleeping
+1318 ms 4 has taken a fork
+1318 ms 4 has taken a fork
+1318 ms 4 is eating
+1318 ms 8 is thinking
+1318 ms 8 has taken a fork
+1318 ms 8 has taken a fork
+1318 ms 6 has taken a fork
+1318 ms 6 has taken a fork
+1318 ms 6 is eating
+1318 ms 8 is eating
+1318 ms 9 is sleeping
+1318 ms 5 is sleeping
+1519 ms 3 is thinking
+	 [DEBUG] philo 2 last meal = 1112.378 
+	 [DEBUG] philo 2 diff current - last meal = 407.018 
+	 [DEBUG] philo 6 last meal = 1112.399 
+	 [DEBUG] philo 8 last meal = 1112.421 
+	 [DEBUG] philo 6 diff current - last meal = 407.030 
+	 [DEBUG] philo 8 diff current - last meal = 407.011 
+1519 ms 9 is thinking
+	 [DEBUG] philo 4 last meal = 1112.423 
+	 [DEBUG] philo 4 diff current - last meal = 407.024 
+1519 ms 9 has taken a fork
+1519 ms 9 has taken a fork
+1519 ms 9 is eating
+1519 ms 5 is thinking
+1519 ms 5 has taken a fork
+1519 ms 5 has taken a fork
+1519 ms 8 is sleeping
+1519 ms 5 is eating
+1519 ms 7 is thinking
+1519 ms 4 is sleeping
+1519 ms 7 has taken a fork
+1519 ms 1 is thinking
+1519 ms 2 is sleeping
+1519 ms 3 has taken a fork
+1520 ms 7 has taken a fork
+1520 ms 7 is eating
+1520 ms 3 has taken a fork
+1520 ms 6 is sleeping
+1520 ms 3 is eating
+1520 ms 1 has taken a fork
+1520 ms 1 has taken a fork
+1520 ms 1 is eating
+	 [DEBUG] philo 5 last meal = 1317.450 
+	 [DEBUG] philo 3 last meal = 1317.456 
+	 [DEBUG] philo 3 diff current - last meal = 407.044 
+	 [DEBUG] philo 7 last meal = 1317.460 
+	 [DEBUG] philo 7 diff current - last meal = 407.048 
+	 [DEBUG] philo 9 last meal = 1317.468 
+1724 ms 2 is thinking
+	 [DEBUG] philo 1 last meal = 1317.444 
+	 [DEBUG] philo 9 diff current - last meal = 407.059 
+	 [DEBUG] philo 5 diff current - last meal = 407.053 
+1725 ms 8 is thinking
+	 [DEBUG] philo 1 diff current - last meal = 407.084 
+1725 ms 8 has taken a fork
+1725 ms 8 has taken a fork
+1725 ms 8 is eating
+1725 ms 2 has taken a fork
+1725 ms 7 is sleeping
+1725 ms 2 has taken a fork
+1725 ms 9 is sleeping
+1725 ms 5 is sleeping
+1725 ms 1 is sleeping
+1725 ms 2 is eating
+1725 ms 3 is sleeping
+1725 ms 6 is thinking
+1725 ms 6 has taken a fork
+1725 ms 6 has taken a fork
+1725 ms 6 is eating
+1725 ms 4 is thinking
+1725 ms 4 has taken a fork
+1725 ms 4 has taken a fork
+1725 ms 4 is eating
+1930 ms 5 is thinking
+1930 ms 3 is thinking
+	 [DEBUG] philo 2 last meal = 1519.418 
+1930 ms 1 is thinking
+	 [DEBUG] philo 2 diff current - last meal = 410.192 
+	 [DEBUG] philo 6 last meal = 1519.440 
+	 [DEBUG] philo 6 diff current - last meal = 410.174 
+1930 ms 6 is sleeping
+1930 ms 1 has taken a fork
+1930 ms 1 has taken a fork
+1930 ms 1 is eating
+	 [DEBUG] philo 8 last meal = 1519.433 
+	 [DEBUG] philo 8 diff current - last meal = 410.189 
+1930 ms 2 is sleeping
+1930 ms 9 is thinking
+	 [DEBUG] philo 4 last meal = 1519.448 
+	 [DEBUG] philo 4 diff current - last meal = 410.194 
+1930 ms 9 has taken a fork
+1930 ms 5 has taken a fork
+1930 ms 5 has taken a fork
+1930 ms 5 is eating
+1930 ms 3 has taken a fork
+1930 ms 3 has taken a fork
+1930 ms 3 is eating
+1930 ms 9 has taken a fork
+1930 ms 8 is sleeping
+1930 ms 9 is eating
+1930 ms 4 is sleeping
+1930 ms 7 is thinking
+1930 ms 7 has taken a fork
+1930 ms 7 has taken a fork
+1930 ms 7 is eating
+	 [DEBUG] philo 1 last meal = 1724.539 
+	 [DEBUG] philo 1 diff current - last meal = 410.100 
+2135 ms 1 is sleeping
+2135 ms 4 is thinking
+2135 ms 6 is thinking
+	 [DEBUG] philo 3 last meal = 1724.501 
+	 [DEBUG] philo 3 diff current - last meal = 410.156 
+2135 ms 3 is sleeping
+	 [DEBUG] philo 9 last meal = 1724.532 
+	 [DEBUG] philo 5 last meal = 1724.550 
+	 [DEBUG] philo 9 diff current - last meal = 410.142 
+	 [DEBUG] philo 5 diff current - last meal = 410.126 
+2135 ms 8 is thinking
+	 [DEBUG] philo 7 last meal = 1724.513 
+	 [DEBUG] philo 7 diff current - last meal = 410.223 
+2135 ms 4 has taken a fork
+2135 ms 7 is sleeping
+2135 ms 9 is sleeping
+2135 ms 5 is sleeping
+2135 ms 6 has taken a fork
+2135 ms 6 has taken a fork
+2135 ms 6 is eating
+2135 ms 8 has taken a fork
+2135 ms 4 has taken a fork
+2135 ms 2 is thinking
+2135 ms 2 has taken a fork
+2135 ms 2 has taken a fork
+2135 ms 2 is eating
+2135 ms 8 has taken a fork
+2135 ms 8 is eating
+2135 ms 4 is eating
+2338 ms 3 is thinking
+	 [DEBUG] philo 8 last meal = 1929.623 
+	 [DEBUG] philo 6 last meal = 1929.615 
+	 [DEBUG] philo 6 diff current - last meal = 408.842 
+	 [DEBUG] philo 4 last meal = 1929.643 
+2338 ms 1 is thinking
+	 [DEBUG] philo 8 diff current - last meal = 408.841 
+2338 ms 1 has taken a fork
+	 [DEBUG] philo 4 diff current - last meal = 408.827 
+2338 ms 4 is sleeping
+	 [DEBUG] philo 2 last meal = 1929.611 
+	 [DEBUG] philo 2 diff current - last meal = 408.875 
+2338 ms 6 is sleeping
+2338 ms 2 is sleeping
+2338 ms 9 is thinking
+2338 ms 9 has taken a fork
+2338 ms 9 has taken a fork
+2338 ms 9 is eating
+2338 ms 7 is thinking
+2339 ms 1 has taken a fork
+2339 ms 7 has taken a fork
+2339 ms 1 is eating
+2339 ms 7 has taken a fork
+2339 ms 7 is eating
+2339 ms 8 is sleeping
+2339 ms 3 has taken a fork
+2339 ms 3 has taken a fork
+2339 ms 3 is eating
+2339 ms 5 is thinking
+2339 ms 5 has taken a fork
+2339 ms 5 has taken a fork
+2339 ms 5 is eating
+2541 ms 2 is thinking
+	 [DEBUG] philo 7 last meal = 2134.737 
+	 [DEBUG] philo 7 diff current - last meal = 406.708 
+2541 ms 7 is sleeping
+	 [DEBUG] philo 3 last meal = 2134.658 
+	 [DEBUG] philo 3 diff current - last meal = 406.801 
+	 [DEBUG] philo 9 last meal = 2134.716 
+	 [DEBUG] philo 9 diff current - last meal = 406.749 
+	 [DEBUG] philo 1 last meal = 2134.640 
+2541 ms 4 is thinking
+	 [DEBUG] philo 1 diff current - last meal = 406.831 
+	 [DEBUG] philo 5 last meal = 2134.723 
+	 [DEBUG] philo 5 diff current - last meal = 406.763 
+2541 ms 4 has taken a fork
+2541 ms 4 has taken a fork
+2541 ms 9 is sleeping
+2542 ms 6 is thinking
+2542 ms 8 is thinking
+2542 ms 8 has taken a fork
+2542 ms 8 has taken a fork
+2542 ms 8 is eating
+2542 ms 3 is sleeping
+2542 ms 5 is sleeping
+2542 ms 1 is sleeping
+2542 ms 2 has taken a fork
+2542 ms 2 has taken a fork
+2542 ms 2 is eating
+2542 ms 4 is eating
+2542 ms 6 has taken a fork
+2542 ms 6 has taken a fork
+2542 ms 6 is eating
+2745 ms 7 is thinking
+	 [DEBUG] philo 2 last meal = 2338.486 
+	 [DEBUG] philo 8 last meal = 2338.488 
+	 [DEBUG] philo 4 last meal = 2338.482 
+	 [DEBUG] philo 4 diff current - last meal = 406.982 
+2745 ms 3 is thinking
+	 [DEBUG] philo 6 last meal = 2338.458 
+	 [DEBUG] philo 8 diff current - last meal = 406.971 
+	 [DEBUG] philo 2 diff current - last meal = 406.967 
+	 [DEBUG] philo 6 diff current - last meal = 407.017 
+2745 ms 1 is thinking
+2745 ms 1 has taken a fork
+2745 ms 1 has taken a fork
+2746 ms 9 is thinking
+2746 ms 9 has taken a fork
+2746 ms 9 has taken a fork
+2746 ms 9 is eating
+2746 ms 8 is sleeping
+2746 ms 7 has taken a fork
+2746 ms 7 has taken a fork
+2746 ms 7 is eating
+2746 ms 5 is thinking
+2746 ms 5 has taken a fork
+2746 ms 4 is sleeping
+2746 ms 5 has taken a fork
+2746 ms 5 is eating
+2746 ms 2 is sleeping
+2746 ms 6 is sleeping
+2746 ms 1 is eating
+2746 ms 3 has taken a fork
+2746 ms 3 has taken a fork
+2746 ms 3 is eating
+2951 ms 8 is thinking
+	 [DEBUG] philo 1 last meal = 2541.474 
+	 [DEBUG] philo 5 last meal = 2541.487 
+	 [DEBUG] philo 1 diff current - last meal = 409.089 
+2951 ms 2 is thinking
+	 [DEBUG] philo 3 last meal = 2541.460 
+	 [DEBUG] philo 3 diff current - last meal = 409.115 
+2951 ms 1 is sleeping
+	 [DEBUG] philo 5 diff current - last meal = 409.077 
+	 [DEBUG] philo 7 last meal = 2541.446 
+	 [DEBUG] philo 7 diff current - last meal = 409.143 
+	 [DEBUG] philo 9 last meal = 2541.465 
+	 [DEBUG] philo 9 diff current - last meal = 409.130 
+2951 ms 6 is thinking
+2951 ms 6 has taken a fork
+2951 ms 6 has taken a fork
+2951 ms 2 has taken a fork
+2951 ms 3 is sleeping
+2951 ms 5 is sleeping
+2951 ms 9 is sleeping
+2951 ms 8 has taken a fork
+2951 ms 8 has taken a fork
+2951 ms 8 is eating
+2951 ms 4 is thinking
+2951 ms 2 has taken a fork
+2951 ms 4 has taken a fork
+2951 ms 4 has taken a fork
+2951 ms 4 is eating
+2951 ms 2 is eating
+2951 ms 7 is sleeping
+2951 ms 6 is eating
+3153 ms 1 is thinking
+3153 ms 1 has taken a fork
+3153 ms 3 is thinking
+	 [DEBUG] philo 2 last meal = 2745.480 
+	 [DEBUG] philo 2 diff current - last meal = 407.860 
+	 [DEBUG] philo 8 last meal = 2745.488 
+	 [DEBUG] philo 8 diff current - last meal = 407.865 
+3153 ms 9 is thinking
+3153 ms 9 has taken a fork
+3153 ms 9 has taken a fork
+3153 ms 9 is eating
+3153 ms 1 has taken a fork
+3153 ms 3 has taken a fork
+3153 ms 1 is eating
+3153 ms 8 is sleeping
+3153 ms 2 is sleeping
+3155 ms 5 is thinking
+	 [DEBUG] philo 4 last meal = 2745.470 
+	 [DEBUG] philo 4 diff current - last meal = 409.983 
+3155 ms 7 is thinking
+3155 ms 4 is sleeping
+3155 ms 5 has taken a fork
+	 [DEBUG] philo 6 last meal = 2745.485 
+	 [DEBUG] philo 6 diff current - last meal = 409.988 
+3155 ms 3 has taken a fork
+3155 ms 3 is eating
+3155 ms 6 is sleeping
+3155 ms 5 has taken a fork
+3155 ms 5 is eating
+3155 ms 7 has taken a fork
+3155 ms 7 has taken a fork
+3155 ms 7 is eating
+	 [DEBUG] philo 1 last meal = 2950.568 
+	 [DEBUG] philo 1 diff current - last meal = 404.140 
+3355 ms 2 is thinking
+3355 ms 2 has taken a fork
+3355 ms 1 is sleeping
+	 [DEBUG] philo 9 last meal = 2950.596 
+	 [DEBUG] philo 9 diff current - last meal = 404.131 
+3355 ms 8 is thinking
+3355 ms 9 is sleeping
+	 [DEBUG] philo 5 last meal = 2950.583 
+	 [DEBUG] philo 5 diff current - last meal = 408.246 
+3359 ms 4 is thinking
+3359 ms 6 is thinking
+3359 ms 6 has taken a fork
+	 [DEBUG] philo 3 last meal = 2950.579 
+	 [DEBUG] philo 3 diff current - last meal = 408.264 
+	 [DEBUG] philo 7 last meal = 2950.592 
+	 [DEBUG] philo 7 diff current - last meal = 408.253 
+3359 ms 7 is sleeping
+3359 ms 5 is sleeping
+3359 ms 6 has taken a fork
+3359 ms 3 is sleeping
+3359 ms 2 has taken a fork
+3359 ms 2 is eating
+3359 ms 4 has taken a fork
+3359 ms 4 has taken a fork
+3359 ms 4 is eating
+3359 ms 6 is eating
+3359 ms 8 has taken a fork
+3359 ms 8 has taken a fork
+3359 ms 8 is eating
+3560 ms 1 is thinking
+3560 ms 1 has taken a fork
+3560 ms 9 is thinking
+3560 ms 7 is thinking
+3560 ms 5 is thinking
+	 [DEBUG] philo 4 last meal = 3155.454 
+	 [DEBUG] philo 4 diff current - last meal = 404.323 
+	 [DEBUG] philo 6 last meal = 3155.474 
+	 [DEBUG] philo 6 diff current - last meal = 404.306 
+3560 ms 4 is sleeping
+3560 ms 6 is sleeping
+	 [DEBUG] philo 8 last meal = 3153.354 
+3560 ms 3 is thinking
+	 [DEBUG] philo 8 diff current - last meal = 406.434 
+3560 ms 5 has taken a fork
+	 [DEBUG] philo 2 last meal = 3153.341 
+	 [DEBUG] philo 2 diff current - last meal = 406.468 
+3560 ms 5 has taken a fork
+3560 ms 5 is eating
+3560 ms 2 is sleeping
+3560 ms 1 has taken a fork
+3560 ms 8 is sleeping
+3560 ms 3 has taken a fork
+3560 ms 3 has taken a fork
+3560 ms 3 is eating
+3560 ms 7 has taken a fork
+3560 ms 9 has taken a fork
+3560 ms 9 has taken a fork
+3560 ms 9 is eating
+3560 ms 7 has taken a fork
+3560 ms 7 is eating
+3560 ms 1 is eating
+	 [DEBUG] philo 5 last meal = 3358.830 
+	 [DEBUG] philo 5 diff current - last meal = 405.977 
+	 [DEBUG] philo 3 last meal = 3358.844 
+	 [DEBUG] philo 3 diff current - last meal = 405.982 
+3765 ms 8 is thinking
+	 [DEBUG] philo 9 last meal = 3354.729 
+	 [DEBUG] philo 7 last meal = 3358.846 
+	 [DEBUG] philo 9 diff current - last meal = 410.112 
+3765 ms 4 is thinking
+	 [DEBUG] philo 1 last meal = 3354.709 
+3765 ms 4 has taken a fork
+3765 ms 4 has taken a fork
+	 [DEBUG] philo 1 diff current - last meal = 410.149 
+	 [DEBUG] philo 7 diff current - last meal = 405.995 
+3765 ms 4 is eating
+3765 ms 8 has taken a fork
+3765 ms 8 has taken a fork
+3765 ms 8 is eating
+3765 ms 9 is sleeping
+3765 ms 1 is sleeping
+3765 ms 2 is thinking
+3765 ms 2 has taken a fork
+3765 ms 2 has taken a fork
+3765 ms 7 is sleeping
+3765 ms 5 is sleeping
+3765 ms 6 is thinking
+3765 ms 6 has taken a fork
+3765 ms 3 is sleeping
+3765 ms 2 is eating
+3765 ms 6 has taken a fork
+3765 ms 6 is eating
+	 [DEBUG] philo 4 last meal = 3559.778 
+	 [DEBUG] philo 4 diff current - last meal = 407.705 
+	 [DEBUG] philo 8 last meal = 3559.799 
+	 [DEBUG] philo 8 diff current - last meal = 407.704 
+3967 ms 9 is thinking
+	 [DEBUG] philo 2 last meal = 3559.810 
+	 [DEBUG] philo 2 diff current - last meal = 407.703 
+3968 ms 2 is sleeping
+3968 ms 9 has taken a fork
+3968 ms 9 has taken a fork
+3968 ms 9 is eating
+	 [DEBUG] philo 6 last meal = 3559.781 
+	 [DEBUG] philo 6 diff current - last meal = 407.748 
+3968 ms 3 is thinking
+3968 ms 3 has taken a fork
+3968 ms 3 has taken a fork
+3968 ms 3 is eating
+3968 ms 7 is thinking
+3968 ms 8 is sleeping
+3968 ms 1 is thinking
+3968 ms 7 has taken a fork
+3968 ms 7 has taken a fork
+3968 ms 7 is eating
+3968 ms 4 is sleeping
+3968 ms 5 is thinking
+3968 ms 5 has taken a fork
+3968 ms 6 is sleeping
+3968 ms 1 has taken a fork
+3968 ms 1 has taken a fork
+3968 ms 1 is eating
+3968 ms 5 has taken a fork
+3968 ms 5 is eating
+4169 ms 2 is thinking
+	 [DEBUG] philo 5 last meal = 3764.808 
+	 [DEBUG] philo 5 diff current - last meal = 404.517 
+	 [DEBUG] philo 9 last meal = 3764.845 
+4169 ms 4 is thinking
+	 [DEBUG] philo 9 diff current - last meal = 404.504 
+4169 ms 8 is thinking
+4169 ms 6 is thinking
+4169 ms 6 has taken a fork
+	 [DEBUG] philo 7 last meal = 3764.876 
+	 [DEBUG] philo 7 diff current - last meal = 404.487 
+4169 ms 7 is sleeping
+	 [DEBUG] philo 1 last meal = 3764.865 
+4169 ms 5 is sleeping
+4169 ms 9 is sleeping
+	 [DEBUG] philo 1 diff current - last meal = 404.516 
+4169 ms 1 is sleeping
+	 [DEBUG] philo 3 last meal = 3764.830 
+	 [DEBUG] philo 3 diff current - last meal = 404.564 
+4169 ms 8 has taken a fork
+4169 ms 8 has taken a fork
+4169 ms 3 is sleeping
+4169 ms 8 is eating
+4169 ms 2 has taken a fork
+4169 ms 4 has taken a fork
+4169 ms 2 has taken a fork
+4169 ms 4 has taken a fork
+4169 ms 4 is eating
+4169 ms 6 has taken a fork
+4169 ms 6 is eating
+4169 ms 2 is eating
+4373 ms 7 is thinking
+4373 ms 1 is thinking
+4373 ms 1 has taken a fork
+4373 ms 5 is thinking
+	 [DEBUG] philo 6 last meal = 3967.555 
+	 [DEBUG] philo 6 diff current - last meal = 405.961 
+4374 ms 3 is thinking
+	 [DEBUG] philo 8 last meal = 3967.507 
+	 [DEBUG] philo 8 diff current - last meal = 406.022 
+	 [DEBUG] philo 2 last meal = 3967.514 
+	 [DEBUG] philo 2 diff current - last meal = 406.023 
+	 [DEBUG] philo 4 last meal = 3967.496 
+	 [DEBUG] philo 4 diff current - last meal = 406.052 
+4374 ms 9 is thinking
+4374 ms 6 is sleeping
+4374 ms 9 has taken a fork
+4374 ms 9 has taken a fork
+4374 ms 9 is eating
+4374 ms 2 is sleeping
+4374 ms 8 is sleeping
+4374 ms 3 has taken a fork
+4374 ms 4 is sleeping
+4374 ms 3 has taken a fork
+4374 ms 5 has taken a fork
+4374 ms 3 is eating
+4374 ms 5 has taken a fork
+4374 ms 5 is eating
+4374 ms 1 has taken a fork
+4374 ms 1 is eating
+4374 ms 7 has taken a fork
+4374 ms 7 has taken a fork
+4374 ms 7 is eating
+	 [DEBUG] philo 9 last meal = 4169.353 
+	 [DEBUG] philo 5 last meal = 4169.326 
+	 [DEBUG] philo 3 last meal = 4169.394 
+	 [DEBUG] philo 5 diff current - last meal = 406.189 
+	 [DEBUG] philo 1 last meal = 4169.383 
+	 [DEBUG] philo 1 diff current - last meal = 406.152 
+4575 ms 8 is thinking
+	 [DEBUG] philo 3 diff current - last meal = 406.125 
+	 [DEBUG] philo 9 diff current - last meal = 406.153 
+4576 ms 6 is thinking
+	 [DEBUG] philo 7 last meal = 4169.364 
+	 [DEBUG] philo 7 diff current - last meal = 406.197 
+4576 ms 6 has taken a fork
+4576 ms 8 has taken a fork
+4576 ms 8 has taken a fork
+4576 ms 8 is eating
+4576 ms 1 is sleeping
+4576 ms 9 is sleeping
+4576 ms 2 is thinking
+4576 ms 2 has taken a fork
+4576 ms 2 has taken a fork
+4576 ms 2 is eating
+4576 ms 4 is thinking
+4576 ms 4 has taken a fork
+4576 ms 4 has taken a fork
+4576 ms 4 is eating
+4576 ms 6 has taken a fork
+4576 ms 5 is sleeping
+4576 ms 6 is eating
+4576 ms 3 is sleeping
+4576 ms 7 is sleeping
+4777 ms 1 is thinking
+4777 ms 1 has taken a fork
+	 [DEBUG] philo 2 last meal = 4373.538 
+	 [DEBUG] philo 2 diff current - last meal = 403.971 
+4778 ms 9 is thinking
+	 [DEBUG] philo 4 last meal = 4373.552 
+	 [DEBUG] philo 4 diff current - last meal = 403.970 
+	 [DEBUG] phi
