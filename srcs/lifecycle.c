@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/19 17:34:47 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 20:44:59 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@ void	*lifecycle(void *philo)
 	{
 		while (1)
 		{
+			if (!start)
+			{
+				gettimeofday(&(info->tv_begin), NULL);
+				start = 1;
+			}
 			print_msg(((t_philo *)philo)->pos, "takes a fork", info);	
 			pthread_mutex_lock(&((t_philo *)philo)->fork);
 			print_msg(((t_philo *)philo)->pos, "takes a fork", info);	

@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/19 17:35:32 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 20:42:13 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef unsigned int	t_pos;
 typedef unsigned int	t_count;
 typedef struct s_philo	t_philo;
 
-extern pthread_t	spn;
+extern int	start;
 
 enum	e_status
 {

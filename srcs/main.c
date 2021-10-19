@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/19 17:28:52 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/19 21:05:16 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ void	print_info(t_info info, t_philo *philo)
 	}
 }
 ///////////////////////////
+
+int start = 0;
+
 void	*spawn(void *philo)
 {
 	t_philo			*browse;
@@ -47,8 +50,6 @@ void	*spawn(void *philo)
 		browse = (t_philo *)philo;
 		while (++i < info->philo_count)
 		{
-			if (i == 1)
-				gettimeofday(&(info->tv_begin), NULL);
 			pthread_create(&browse->thread, NULL, lifecycle, (void *)browse);
 			usleep(500);
 			browse = browse->next;
