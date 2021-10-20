@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/20 10:49:48 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/20 15:31:39 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ static void	init_philos(t_info *info, t_philo **head)
 
 void	init(int ac, char **av, t_info *info, t_philo **philo)
 {
-	ph_exit(philo, NULL);
+	ph_exit((void **)philo, NULL);
 	if (ac < 4)
 		ph_exit(NULL, ERR_NOT_ENOUGH_ARGS);
 	else if (ac > 5)

@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/20 13:47:54 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/20 15:30:34 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,6 @@ int	main(int ac, char **av)
 	pthread_create(&spn, NULL, spawn, (void *)philo);
 	pthread_join(spn, NULL);
 
-	ph_exit(&philo, NULL);
+	ph_exit((void **)(&philo), NULL);
 	return (0);
 }

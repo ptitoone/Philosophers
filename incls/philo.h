@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/20 10:49:29 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/20 15:14:01 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ typedef struct	s_info
 	t_count			opt_min_meals;
 }				t_info;
 
-void	ph_exit(t_philo **philo, char *msg);
+void	ph_exit(void **philo, char *msg);
 void	init(int ac, char **av, t_info *info, t_philo **philo);
 void	*lifecycle(void *philo);
 void	*spawn(void *philo);
