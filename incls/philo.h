@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/19 20:42:13 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/20 10:49:29 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ typedef struct	s_info
 {
 	struct timeval	tv_begin;
 	pthread_mutex_t	msg_lock;
+	pthread_mutex_t	act_lock;
 	t_count			philo_count;
 	t_time			time_to_die;
 	t_time			time_to_eat;

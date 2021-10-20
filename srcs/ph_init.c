@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/19 17:35:32 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/20 10:49:48 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static void	init_info(int ac, char **av, t_info *info)
 
 	i = -1;
 	pthread_mutex_init(&info->msg_lock, NULL);
+	pthread_mutex_init(&info->act_lock, NULL);
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);
