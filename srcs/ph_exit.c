@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 15:50:01 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/20 15:32:14 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/20 16:55:24 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void	ph_exit(void **philo, char *msg)
 		{
 			to_free = browse;
 			browse = browse->next; 
+			pthread_detach(browse->thread);
+			pthread_mutex_unlock(&browse->fork);
 			free(to_free);
 		}
 		free(browse);
