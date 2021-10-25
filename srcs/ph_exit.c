@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 15:50:01 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/20 16:55:24 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/25 21:51:44 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void	ph_exit(void **philo, char *msg)
 		free(browse);
 		if (msg)
 			throw_error(msg);
-		while (1);
 		exit(EXIT_SUCCESS);
 	}
 }

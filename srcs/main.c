@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/20 15:30:34 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/25 21:01:03 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	*spawn(void *philo)
 		{
 			if (browse->pos % 2)
 				pthread_create(&browse->thread, NULL, lifecycle, (void *)browse);
-			usleep(100);
+			//usleep(100);
 			browse = browse->next;
 		}
 		while (1){}
