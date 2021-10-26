@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/20 15:31:39 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/26 13:43:37 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static void	init_info(int ac, char **av, t_info *info)
 
 	i = -1;
 	pthread_mutex_init(&info->msg_lock, NULL);
-	pthread_mutex_init(&info->act_lock, NULL);
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);
@@ -49,6 +48,7 @@ static t_philo	*new_philo(int pos)
 		new->pos = pos;
 		new->next = NULL;
 		new->time_last_meal = 0;
+		new->number_of_meals = 0;
 	}
 	else
 		ph_exit(NULL, ERR_MALLOC);
@@ -81,5 +81,6 @@ void	init(int ac, char **av, t_info *info, t_philo **philo)
 	init_info(ac, av, info);
 	spawn(info);
 	lifecycle(info);
+	check_death(info);
 	init_philos(info, philo);
 }
