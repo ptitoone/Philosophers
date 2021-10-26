@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 17:41:10 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/26 21:16:24 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ typedef struct s_info
 	t_count			opt_min_meals;
 }				t_info;
 
-void		ph_exit(void **philo, char *msg);
-void		init(int ac, char **av, t_info *info, t_philo **philo);
+t_ribool	throw_error(char *err_msg);
+t_ribool	init(int ac, char **av, t_info *info, t_philo **philo);
 
 int			ft_strcmp(char const *s1, char const *s2);
 t_ribool	ft_long_overflow(const char *src);

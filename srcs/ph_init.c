@@ -6,13 +6,13 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 17:26:23 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/26 21:02:55 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-static void	init_info(int ac, char **av, t_info *info)
+static t_ribool init_info(int ac, char **av, t_info *info)
 {
 	int			i;
 	long long	num;
@@ -25,7 +25,7 @@ static void	init_info(int ac, char **av, t_info *info)
 	{
 		num = ft_atol(av[i]);
 		if (ft_long_overflow(av[i]) || (num <= 0 || num > UINT_MAX))
-			ph_exit(NULL, ERR_INV_COUNT_RANGE);
+			return (T_FALSE);
 		if (i == 0)
 			info->philo_count = num;
 		else if (i == 1)
@@ -37,6 +37,7 @@ static void	init_info(int ac, char **av, t_info *info)
 		else if (i == 4)
 			info->opt_min_meals = num;
 	}
+	return (T_TRUE);
 }
 
 static t_philo	*new_philo(int pos)
@@ -52,12 +53,10 @@ static t_philo	*new_philo(int pos)
 		new->time_last_meal = 0;
 		new->number_of_meals = 0;
 	}
-	else
-		ph_exit(NULL, ERR_MALLOC);
 	return (new);
 }
 
-static void	init_philos(t_info *info, t_philo **head)
+static t_ribool	init_philos(t_info *info, t_philo **head)
 {
 	int		i;
 	t_philo	*browse;
@@ -68,21 +67,26 @@ static void	init_philos(t_info *info, t_philo **head)
 	while (++i < info->philo_count)
 	{
 		browse->next = new_philo(i + 1);
+		if (!browse->next)
+			return (T_FALSE);
 		browse = browse->next;
 	}
 	browse->next = *head;
+	return (T_TRUE);
 }
 
-void	init(int ac, char **av, t_info *info, t_philo **philo)
+t_ribool	init(int ac, char **av, t_info *info, t_philo **philo)
 {
-	ph_exit((void **)philo, NULL);
 	if (ac < 4)
-		ph_exit(NULL, ERR_NOT_ENOUGH_ARGS);
+		return (throw_error(ERR_NOT_ENOUGH_ARGS));
 	else if (ac > 5)
-		ph_exit(NULL, ERR_TOO_MANY_ARGS);
-	init_info(ac, av, info);
+		return (throw_error(ERR_TOO_MANY_ARGS));
+	else if (!init_info(ac, av, info))
+		return (throw_error(ERR_INV_COUNT_RANGE));
+	else if (!init_philos(info, philo))
+		return (throw_error(ERR_MALLOC));
 	spawn_cycle(info);
 	life_cycle(info);
 	death_cycle(info);
-	init_philos(info, philo);
+	return (T_TRUE);
 }

@@ -6,45 +6,16 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 17:56:12 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/26 21:48:22 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-static void	throw_error(char *err_msg)
+t_ribool	throw_error(char *err_msg)
 {
 	printf("Error: %s\n", err_msg);
-	exit(EXIT_FAILURE);
-}
-
-void	ph_exit(void **philo, char *msg)
-{
-	static t_philo	**sv_philo;
-	t_philo			*browse;
-	t_philo			*to_free;
-
-	if (!sv_philo)
-		sv_philo = (t_philo **)philo;
-	else
-	{	
-		if (browse)
-		{
-			browse = (*sv_philo)->next;
-			while (browse != *sv_philo)
-			{
-				to_free = browse;
-				browse = browse->next;
-				pthread_detach(browse->life);
-				free(to_free);
-			}
-			free(browse);
-		}
-		if (msg)
-			throw_error(msg);
-	//	while (1);
-		exit(EXIT_SUCCESS);
-	}
+	return (T_FALSE);
 }
 
 void	print_msg(t_count pos, char *msg, t_info *info)
@@ -54,7 +25,7 @@ void	print_msg(t_count pos, char *msg, t_info *info)
 	if (ft_strcmp(msg, "died"))
 		pthread_mutex_unlock(&info->msg_lock);
 	else
-		ph_exit(0, 0);
+		info->philo_count = 0;
 }
 
 int	main(int ac, char **av)
@@ -63,9 +34,9 @@ int	main(int ac, char **av)
 	t_philo		*philo;
 	pthread_t	spawn;
 
-	init(ac - 1, av + 1, &info, &philo);
+	if (!init(ac - 1, av + 1, &info, &philo))
+		return (EXIT_FAILURE);
 	pthread_create(&spawn, NULL, spawn_cycle, (void *)philo);
 	pthread_join(spawn, NULL);
-	ph_exit((void **)(&philo), NULL);
-	return (0);
+	return (EXIT_SUCCESS);
 }
