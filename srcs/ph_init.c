@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 13:43:37 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/26 16:01:15 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static void	init_info(int ac, char **av, t_info *info)
 
 	i = -1;
 	pthread_mutex_init(&info->msg_lock, NULL);
+	pthread_mutex_init(&info->act_lock, NULL);
+	info->opt_min_meals = -1;
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);

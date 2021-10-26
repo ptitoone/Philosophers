@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 13:33:36 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/26 15:31:53 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ struct	s_philo
 
 typedef struct s_info
 {
-	struct timeval	tv_begin;
 	pthread_mutex_t	msg_lock;
 	pthread_mutex_t	act_lock;
 	pthread_t		death;
+	t_count			start_time;
 	int				philo_count;
 	t_count			time_to_die;
 	t_count			time_to_eat;
@@ -57,7 +57,8 @@ typedef struct s_info
 
 void	ph_exit(void **philo, char *msg);
 void	init(int ac, char **av, t_info *info, t_philo **philo);
-int		get_current_time_ms(t_info *info);
+t_count	get_current_time_ms(void);
+void	wait_action(t_count msec_wait);
 void	*lifecycle(void *philo);
 void	*spawn(void *philo);
 void	*check_death(void *philo);

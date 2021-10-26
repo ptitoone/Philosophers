@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 13:39:18 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/26 15:10:03 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*spawn(void *philo)
 		i = 0;
 		browse = (t_philo *)philo;
 		count = info->philo_count;
-		gettimeofday(&(info->tv_begin), NULL);
+		info->start_time = get_current_time_ms();
 		while (++i <= count)
 		{
 			if (!(browse->pos % 2))
