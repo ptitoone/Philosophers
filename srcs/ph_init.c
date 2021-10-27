@@ -6,18 +6,19 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 21:02:55 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/27 11:41:31 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-static t_ribool init_info(int ac, char **av, t_info *info)
+static t_ribool	init_info(int ac, char **av, t_info *info)
 {
 	int			i;
 	long long	num;
 
 	i = -1;
+	pthread_mutex_init(&info->init_lock, NULL);
 	pthread_mutex_init(&info->msg_lock, NULL);
 	pthread_mutex_init(&info->philo_decr_lock, NULL);
 	info->opt_min_meals = -1;
