@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/27 12:21:29 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/27 13:01:25 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 # define ERR_NOT_ENOUGH_ARGS	"Not enough arguments."
 # define ERR_TOO_MANY_ARGS		"Too many arguments."
 # define ERR_INVALID_ARGS		"Invalid arguments."
-# define ERR_GET_TIME			"Getting time of day failed"
 # define ERR_INV_COUNT_RANGE	"Invalid count range (min: 1 | max: 4294967295)"
 # define ERR_MALLOC				"Memory allocation failed"
 

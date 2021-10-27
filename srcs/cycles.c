@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/27 11:50:56 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/27 13:01:00 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ void	*death_cycle(void *philo)
 {
 	static t_info	*info;
 	t_philo			*browse;
-	t_count			count;
 
 	if (!info)
 		info = philo;
 	else
 	{
-		count = info->philo_count;
 		browse = (t_philo *)philo;
 		while (info->philo_count > 0)
 		{
@@ -31,12 +29,7 @@ void	*death_cycle(void *philo)
 				print_msg(((t_philo *)philo)->pos, "died", info);
 			browse = browse->next;
 		}
-		while (--count > 0)
-		{
-			pthread_detach(browse->life);
-			pthread_mutex_unlock(&info->msg_lock);
-			browse = browse->next;
-		}
+		pthread_mutex_unlock(&info->msg_lock);
 	}
 	return (NULL);
 }
