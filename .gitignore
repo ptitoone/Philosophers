@@ -1,9 +1,6 @@
 # Prerequisites
 *.d
 
-# Libft copied header
-incls/libft.h
-
 # Object files
 *.o
 *.ko
@@ -45,6 +42,7 @@ philo
 *.su
 *.idb
 *.pdb
+log
 
 # Kernel Module Compile Results
 *.mod*
