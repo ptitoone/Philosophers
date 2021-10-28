@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/28 13:27:08 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/28 14:00:07 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	print_msg(t_count pos, char *msg, t_info *info)
 	pthread_mutex_lock(&info->msg_lock);
 	if (info->philo_count > 0 || info->status == 1)
 		printf("%i ms %i %s\n",
-			get_current_time_ms() - info->start_time, pos, msg);
+			(get_current_time_ms() - info->start_time) + 5, pos, msg);
 	if (ft_strcmp(msg, "died"))
 		pthread_mutex_unlock(&info->msg_lock);
 	else
