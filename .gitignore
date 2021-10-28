@@ -29,7 +29,7 @@
 *.dylib
 
 # Executables
-philo
+./philo/philo
 *.exe
 *.out
 *.app
@@ -42,7 +42,7 @@ philo
 *.su
 *.idb
 *.pdb
-log
+./philo/log
 
 # Kernel Module Compile Results
 *.mod*
