@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/28 11:00:38 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/28 12:20:58 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ static t_ribool	init_info(int ac, char **av, t_info *info)
 	pthread_mutex_init(&info->msg_lock, NULL);
 	pthread_mutex_init(&info->philo_decr_lock, NULL);
 	info->opt_min_meals = -1;
+	info->status = 1;
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);

@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/28 10:59:08 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/28 12:21:55 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef struct s_info
 	pthread_mutex_t	msg_lock;
 	pthread_mutex_t	philo_decr_lock;
 	t_count			start_time;
+	int				status;
 	int				philo_count;
 	t_count			time_to_die;
 	t_count			time_to_eat;

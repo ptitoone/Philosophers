@@ -1,0 +1,389 @@
+0 ms 1 takes a fork
+0 ms 1 takes a fork
+0 ms 1 is eating
+0 ms 3 takes a fork
+0 ms 3 takes a fork
+0 ms 3 is eating
+0 ms 5 takes a fork
+0 ms 5 takes a fork
+0 ms 5 is eating
+1 ms 7 takes a fork
+1 ms 7 takes a fork
+1 ms 7 is eating
+1 ms 9 takes a fork
+1 ms 9 takes a fork
+1 ms 9 is eating
+200 ms 5 is spleeping
+200 ms 3 is spleeping
+200 ms 1 is spleeping
+200 ms 2 takes a fork
+200 ms 2 takes a fork
+200 ms 6 takes a fork
+200 ms 4 takes a fork
+200 ms 4 takes a fork
+200 ms 4 is eating
+200 ms 2 is eating
+201 ms 9 is spleeping
+201 ms 8 takes a fork
+201 ms 6 takes a fork
+201 ms 6 is eating
+201 ms 7 is spleeping
+201 ms 8 takes a fork
+201 ms 8 is eating
+201 ms 10 takes a fork
+201 ms 10 takes a fork
+201 ms 10 is eating
+400 ms 5 is thinking
+400 ms 4 is spleeping
+400 ms 5 takes a fork
+400 ms 2 is spleeping
+400 ms 3 is thinking
+400 ms 3 takes a fork
+400 ms 3 takes a fork
+400 ms 3 is eating
+400 ms 1 is thinking
+401 ms 6 is spleeping
+401 ms 8 is spleeping
+401 ms 10 is spleeping
+401 ms 5 takes a fork
+401 ms 5 is eating
+401 ms 7 is thinking
+401 ms 7 takes a fork
+401 ms 7 takes a fork
+401 ms 7 is eating
+401 ms 9 is thinking
+401 ms 9 takes a fork
+401 ms 9 takes a fork
+401 ms 9 is eating
+401 ms 1 takes a fork
+401 ms 1 takes a fork
+401 ms 1 is eating
+600 ms 4 is thinking
+600 ms 2 is thinking
+600 ms 3 is spleeping
+600 ms 4 takes a fork
+601 ms 8 is thinking
+601 ms 9 is spleeping
+601 ms 10 is thinking
+601 ms 10 takes a fork
+601 ms 1 is spleeping
+601 ms 2 takes a fork
+601 ms 2 takes a fork
+601 ms 4 takes a fork
+601 ms 10 takes a fork
+601 ms 10 is eating
+601 ms 8 takes a fork
+601 ms 8 takes a fork
+601 ms 8 is eating
+601 ms 4 is eating
+601 ms 7 is spleeping
+601 ms 5 is spleeping
+601 ms 6 is thinking
+601 ms 6 takes a fork
+601 ms 6 takes a fork
+601 ms 6 is eating
+601 ms 2 is eating
+800 ms 3 is thinking
+801 ms 9 is thinking
+801 ms 10 is spleeping
+801 ms 7 is thinking
+801 ms 1 is thinking
+801 ms 1 takes a fork
+801 ms 5 is thinking
+801 ms 6 is spleeping
+801 ms 4 is spleeping
+801 ms 2 is spleeping
+801 ms 1 takes a fork
+801 ms 3 takes a fork
+801 ms 9 takes a fork
+801 ms 1 is eating
+801 ms 9 takes a fork
+801 ms 9 is eating
+801 ms 5 takes a fork
+801 ms 5 takes a fork
+801 ms 8 is spleeping
+801 ms 3 takes a fork
+801 ms 5 is eating
+801 ms 7 takes a fork
+801 ms 7 takes a fork
+801 ms 7 is eating
+801 ms 3 is eating
+1001 ms 6 is thinking
+1001 ms 8 is thinking
+1001 ms 7 is spleeping
+1001 ms 8 takes a fork
+1001 ms 3 is spleeping
+1001 ms 1 is spleeping
+1001 ms 9 is spleeping
+1001 ms 5 is spleeping
+1001 ms 8 takes a fork
+1001 ms 8 is eating
+1001 ms 6 takes a fork
+1001 ms 4 is thinking
+1001 ms 4 takes a fork
+1001 ms 4 takes a fork
+1001 ms 4 is eating
+1001 ms 10 is thinking
+1001 ms 10 takes a fork
+1001 ms 6 takes a fork
+1001 ms 2 is thinking
+1001 ms 2 takes a fork
+1001 ms 2 takes a fork
+1001 ms 6 is eating
+1001 ms 2 is eating
+1001 ms 10 takes a fork
+1001 ms 10 is eating
+1201 ms 1 is thinking
+1201 ms 3 is thinking
+1201 ms 5 is thinking
+1201 ms 7 is thinking
+1201 ms 8 is spleeping
+1201 ms 6 is spleeping
+1201 ms 9 is thinking
+1201 ms 9 takes a fork
+1201 ms 9 takes a fork
+1201 ms 9 is eating
+1201 ms 7 takes a fork
+1201 ms 7 takes a fork
+1201 ms 7 is eating
+1201 ms 4 is spleeping
+1201 ms 2 is spleeping
+1201 ms 5 takes a fork
+1201 ms 5 takes a fork
+1201 ms 5 is eating
+1201 ms 3 takes a fork
+1201 ms 3 takes a fork
+1201 ms 3 is eating
+1201 ms 10 is spleeping
+1201 ms 1 takes a fork
+1201 ms 1 takes a fork
+1201 ms 1 is eating
+1401 ms 5 is spleeping
+1401 ms 1 is spleeping
+1401 ms 7 is spleeping
+1401 ms 4 is thinking
+1401 ms 9 is spleeping
+1401 ms 10 is thinking
+1401 ms 3 is spleeping
+1401 ms 4 takes a fork
+1401 ms 4 takes a fork
+1401 ms 4 is eating
+1401 ms 8 is thinking
+1401 ms 8 takes a fork
+1401 ms 8 takes a fork
+1401 ms 8 is eating
+1401 ms 6 is thinking
+1401 ms 6 takes a fork
+1401 ms 6 takes a fork
+1401 ms 6 is eating
+1401 ms 2 is thinking
+1401 ms 2 takes a fork
+1401 ms 2 takes a fork
+1401 ms 2 is eating
+1401 ms 10 takes a fork
+1401 ms 10 takes a fork
+1401 ms 10 is eating
+1601 ms 7 is thinking
+1601 ms 3 is thinking
+1601 ms 6 is spleeping
+1601 ms 1 is thinking
+1601 ms 10 is spleeping
+1601 ms 8 is spleeping
+1601 ms 2 is spleeping
+1601 ms 1 takes a fork
+1601 ms 1 takes a fork
+1601 ms 1 is eating
+1601 ms 7 takes a fork
+1601 ms 5 is thinking
+1601 ms 9 is thinking
+1601 ms 5 takes a fork
+1601 ms 9 takes a fork
+1601 ms 9 takes a fork
+1601 ms 7 takes a fork
+1601 ms 5 takes a fork
+1601 ms 7 is eating
+1601 ms 4 is spleeping
+1601 ms 3 takes a fork
+1601 ms 3 takes a fork
+1601 ms 5 is eating
+1601 ms 3 is eating
+1601 ms 9 is eating
+1801 ms 5 is spleeping
+1801 ms 6 is thinking
+1801 ms 1 is spleeping
+1801 ms 7 is spleeping
+1801 ms 10 is thinking
+1801 ms 10 takes a fork
+1801 ms 10 takes a fork
+1801 ms 10 is eating
+1801 ms 2 is thinking
+1801 ms 9 is spleeping
+1801 ms 6 takes a fork
+1801 ms 4 is thinking
+1801 ms 6 takes a fork
+1801 ms 4 takes a fork
+1801 ms 4 takes a fork
+1801 ms 4 is eating
+1801 ms 6 is eating
+1801 ms 2 takes a fork
+1801 ms 2 takes a fork
+1801 ms 2 is eating
+1801 ms 8 is thinking
+1801 ms 8 takes a fork
+1801 ms 8 takes a fork
+1801 ms 8 is eating
+1801 ms 3 is spleeping
+2001 ms 8 is spleeping
+2001 ms 5 is thinking
+2001 ms 4 is spleeping
+2001 ms 5 takes a fork
+2001 ms 7 is thinking
+2001 ms 5 takes a fork
+2001 ms 7 takes a fork
+2001 ms 1 is thinking
+2001 ms 5 is eating
+2001 ms 2 is spleeping
+2001 ms 7 takes a fork
+2001 ms 7 is eating
+2001 ms 3 is thinking
+2001 ms 3 takes a fork
+2001 ms 3 takes a fork
+2001 ms 3 is eating
+2001 ms 10 is spleeping
+2001 ms 1 takes a fork
+2001 ms 1 takes a fork
+2001 ms 1 is eating
+2001 ms 9 is thinking
+2001 ms 9 takes a fork
+2001 ms 9 takes a fork
+2001 ms 9 is eating
+2001 ms 6 is spleeping
+2201 ms 2 is thinking
+2201 ms 7 is spleeping
+2201 ms 10 is thinking
+2201 ms 6 is thinking
+2201 ms 8 is thinking
+2201 ms 2 takes a fork
+2201 ms 9 is spleeping
+2201 ms 4 is thinking
+2201 ms 1 is spleeping
+2201 ms 6 takes a fork
+2201 ms 6 takes a fork
+2201 ms 6 is eating
+2201 ms 10 takes a fork
+2201 ms 8 takes a fork
+2201 ms 2 takes a fork
+2201 ms 8 takes a fork
+2201 ms 3 is spleeping
+2201 ms 2 is eating
+2201 ms 8 is eating
+2201 ms 4 takes a fork
+2201 ms 4 takes a fork
+2201 ms 5 is spleeping
+2201 ms 4 is eating
+2201 ms 10 takes a fork
+2201 ms 10 is eating
+2401 ms 2 is spleeping
+2401 ms 1 is thinking
+2401 ms 8 is spleeping
+2401 ms 10 is spleeping
+2401 ms 3 is thinking
+2401 ms 3 takes a fork
+2401 ms 9 is thinking
+2401 ms 4 is spleeping
+2401 ms 3 takes a fork
+2401 ms 7 is thinking
+2401 ms 5 is thinking
+2401 ms 7 takes a fork
+2401 ms 7 takes a fork
+2401 ms 5 takes a fork
+2401 ms 6 is spleeping
+2401 ms 3 is eating
+2401 ms 5 takes a fork
+2401 ms 5 is eating
+2401 ms 9 takes a fork
+2401 ms 1 takes a fork
+2401 ms 1 takes a fork
+2401 ms 9 takes a fork
+2401 ms 7 is eating
+2401 ms 9 is eating
+2401 ms 1 is eating
+2601 ms 6 is thinking
+2601 ms 9 is spleeping
+2601 ms 4 is thinking
+2601 ms 8 is thinking
+2601 ms 5 is spleeping
+2601 ms 10 is thinking
+2601 ms 3 is spleeping
+2601 ms 6 takes a fork
+2601 ms 6 takes a fork
+2601 ms 6 is eating
+2601 ms 10 takes a fork
+2601 ms 10 takes a fork
+2601 ms 10 is eating
+2601 ms 1 is spleeping
+2601 ms 7 is spleeping
+2601 ms 4 takes a fork
+2601 ms 4 takes a fork
+2601 ms 2 is thinking
+2601 ms 2 takes a fork
+2601 ms 8 takes a fork
+2601 ms 8 takes a fork
+2601 ms 2 takes a fork
+2601 ms 2 is eating
+2601 ms 8 is eating
+2601 ms 4 is eating
+2801 ms 1 is thinking
+2801 ms 4 is spleeping
+2801 ms 3 is thinking
+2801 ms 6 is spleeping
+2801 ms 7 is thinking
+2801 ms 10 is spleeping
+2801 ms 9 is thinking
+2801 ms 9 takes a fork
+2801 ms 1 takes a fork
+2801 ms 3 takes a fork
+2801 ms 8 is spleeping
+2801 ms 3 takes a fork
+2801 ms 7 takes a fork
+2801 ms 7 takes a fork
+2801 ms 9 takes a fork
+2801 ms 1 takes a fork
+2801 ms 9 is eating
+2801 ms 7 is eating
+2801 ms 2 is spleeping
+2801 ms 3 is eating
+2801 ms 1 is eating
+2801 ms 5 is thinking
+2801 ms 5 takes a fork
+2801 ms 5 takes a fork
+2801 ms 5 is eating
+3001 ms 1 is spleeping
+3001 ms 2 is thinking
+3001 ms 2 takes a fork
+3001 ms 4 is thinking
+3001 ms 10 is thinking
+3001 ms 9 is spleeping
+3001 ms 7 is spleeping
+3001 ms 8 is thinking
+3001 ms 8 takes a fork
+3001 ms 8 takes a fork
+3001 ms 2 takes a fork
+3001 ms 2 is eating
+3001 ms 8 is eating
+3001 ms 4 takes a fork
+3001 ms 4 takes a fork
+3001 ms 3 is spleeping
+3001 ms 5 is spleeping
+3001 ms 6 is thinking
+3001 ms 6 takes a fork
+3001 ms 6 takes a fork
+3001 ms 6 is eating
+3001 ms 4 is eating
+3001 ms 10 takes a fork
+3001 ms 10 takes a fork
+3001 ms 10 is eating
+3201 ms 7 is thinking
+3201 ms 10 is spleeping
+3201 ms 9 is thinking
+3201 ms 5 is thinking

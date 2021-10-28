@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/28 10:59:40 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/28 12:31:59 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ void	*death_cycle(void *philo)
 		browse = (t_philo *)philo;
 		while (info->philo_count > 0)
 		{
-			if ((get_current_time_ms() - ((t_philo *)philo)->time_last_meal)
+			if ((get_current_time_ms() - ((t_philo *)philo)->time_last_meal) + 5
 				> info->time_to_die)
 				print_msg(((t_philo *)philo)->pos, "died", info);
 			browse = browse->next;
 		}
-		pthread_mutex_unlock(&info->msg_lock);
+		info->status = 0;
 	}
 	return (NULL);
 }
