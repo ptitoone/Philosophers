@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/30 17:05:19 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/30 19:36:24 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(int ac, char **av)
 	if (!init(ac - 1, av + 1, &info, &philo))
 		return (EXIT_FAILURE);
 	i = info.philo_count;
-	info.start_time = get_current_time_ms() - 1;
+	info.start_time = get_current_time_ms();
 	while (i-- > 0)
 	{
 		pthread_create(&philo->life, NULL, life_cycle, (void *)philo);

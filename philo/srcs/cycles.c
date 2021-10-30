@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/30 19:10:20 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/30 19:30:26 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	eat_action(t_philo *philo, t_info *info)
 	pthread_mutex_lock(&philo->next->fork);
 	print_msg(philo->pos, "has taken a fork", info);
 	philo->status = 1;
-	philo->time_last_meal = get_current_time_ms();
+	philo->time_last_meal = get_current_time_ms() + 2;
 	print_msg(philo->pos, "is eating", info);
 	if (info->opt_min_meals != -1)
 		philo->number_of_meals++;
