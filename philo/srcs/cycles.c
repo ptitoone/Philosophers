@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/30 11:56:09 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/30 19:10:20 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,12 @@ void	*death_cycle(void *philo)
 		browse = (t_philo *)philo;
 		while (info->philo_count > 0)
 		{
-			if (((get_current_time_ms() - ((t_philo *)philo)->time_last_meal)) + 2 
-				> info->time_to_die)
-			{
-				print_msg(((t_philo *)philo)->pos, "died", info);
+			if (((get_current_time_ms() - browse->time_last_meal)) + 0
+				>= info->time_to_die && !browse->status)
 				break ;
-			}
 			browse = browse->next;
 		}
+		print_msg(browse->pos, "died", info);
 		info->status = 0;
 	}
 	return (NULL);
@@ -40,14 +38,12 @@ void	*death_cycle(void *philo)
 static void	eat_action(t_philo *philo, t_info *info)
 {
 	pthread_mutex_lock(&philo->fork);
-	print_msg(philo->pos, "takes a fork", info);
+	print_msg(philo->pos, "has taken a fork", info);
 	pthread_mutex_lock(&philo->next->fork);
-	print_msg(philo->pos, "takes a fork", info);
+	print_msg(philo->pos, "has taken a fork", info);
+	philo->status = 1;
 	philo->time_last_meal = get_current_time_ms();
 	print_msg(philo->pos, "is eating", info);
-	wait_action(info->time_to_eat);
-	pthread_mutex_unlock(&philo->next->fork);
-	pthread_mutex_unlock(&philo->fork);
 	if (info->opt_min_meals != -1)
 		philo->number_of_meals++;
 	if (philo->number_of_meals == info->opt_min_meals)
@@ -56,6 +52,11 @@ static void	eat_action(t_philo *philo, t_info *info)
 		info->philo_count--;
 		pthread_mutex_unlock(&info->philo_decr_lock);
 	}
+	wait_action(info->time_to_eat);
+	philo->status = 0;
+	print_msg(((t_philo *)philo)->pos, "is sleeping", info);
+	pthread_mutex_unlock(&philo->fork);
+	pthread_mutex_unlock(&philo->next->fork);
 }
 
 void	*life_cycle(void *philo)
@@ -70,7 +71,6 @@ void	*life_cycle(void *philo)
 		while (info->philo_count > 0)
 		{
 			eat_action((t_philo *)philo, info);
-			print_msg(((t_philo *)philo)->pos, "is spleeping", info);
 			wait_action(info->time_to_sleep);
 			print_msg(((t_philo *)philo)->pos, "is thinking", info);
 		}

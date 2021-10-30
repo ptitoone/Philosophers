@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/28 12:21:55 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/30 16:15:47 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef enum e_ribool
 struct	s_philo
 {
 	pthread_t		life;
+	int				status;
 	pthread_mutex_t	fork;
 	t_count			pos;
 	t_count			time_last_meal;

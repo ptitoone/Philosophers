@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/28 12:20:58 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/30 16:17:05 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ static t_philo	*new_philo(int pos)
 	{
 		pthread_mutex_init(&new->fork, NULL);
 		new->pos = pos;
+		new->status = 0;
 		new->next = NULL;
 		new->time_last_meal = 0;
 		new->number_of_meals = 0;
