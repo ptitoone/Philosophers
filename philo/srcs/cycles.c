@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/28 13:28:11 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/30 11:56:09 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@ void	*death_cycle(void *philo)
 		browse = (t_philo *)philo;
 		while (info->philo_count > 0)
 		{
-			if ((get_current_time_ms() - ((t_philo *)philo)->time_last_meal)
+			if (((get_current_time_ms() - ((t_philo *)philo)->time_last_meal)) + 2 
 				> info->time_to_die)
+			{
 				print_msg(((t_philo *)philo)->pos, "died", info);
+				break ;
+			}
 			browse = browse->next;
 		}
 		info->status = 0;
@@ -40,11 +43,11 @@ static void	eat_action(t_philo *philo, t_info *info)
 	print_msg(philo->pos, "takes a fork", info);
 	pthread_mutex_lock(&philo->next->fork);
 	print_msg(philo->pos, "takes a fork", info);
-	philo->time_last_meal = get_current_time_ms() - 5;
+	philo->time_last_meal = get_current_time_ms();
 	print_msg(philo->pos, "is eating", info);
 	wait_action(info->time_to_eat);
-	pthread_mutex_unlock(&philo->fork);
 	pthread_mutex_unlock(&philo->next->fork);
+	pthread_mutex_unlock(&philo->fork);
 	if (info->opt_min_meals != -1)
 		philo->number_of_meals++;
 	if (philo->number_of_meals == info->opt_min_meals)

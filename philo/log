@@ -1,46 +1,646 @@
-0 ms 1 takes a fork
-0 ms 1 takes a fork
-0 ms 1 is eating
-0 ms 3 takes a fork
-0 ms 3 takes a fork
-0 ms 3 is eating
-0 ms 5 takes a fork
-200 ms 5 takes a fork
-200 ms 2 takes a fork
-200 ms 5 is eating
-200 ms 1 is spleeping
-200 ms 2 takes a fork
-200 ms 4 takes a fork
-200 ms 2 is eating
-200 ms 3 is spleeping
-350 ms 3 is thinking
-350 ms 1 is thinking
-400 ms 5 is spleeping
-400 ms 4 takes a fork
-400 ms 3 takes a fork
-400 ms 1 takes a fork
-400 ms 4 is eating
-400 ms 1 takes a fork
-400 ms 1 is eating
-400 ms 2 is spleeping
-550 ms 5 is thinking
-550 ms 2 is thinking
-600 ms 4 is spleeping
-600 ms 2 takes a fork
-600 ms 5 takes a fork
-600 ms 1 is spleeping
-600 ms 3 takes a fork
-600 ms 3 is eating
-600 ms 5 takes a fork
-600 ms 5 is eating
-750 ms 4 is thinking
-750 ms 1 is thinking
-800 ms 5 is spleeping
-800 ms 3 is spleeping
-800 ms 1 takes a fork
-800 ms 2 takes a fork
-800 ms 2 is eating
-800 ms 4 takes a fork
-800 ms 4 takes a fork
-800 ms 4 is eating
-806 ms 1 died
+2 ms 1 takes a fork
+2 ms 1 takes a fork
+2 ms 1 is eating
+4 ms 3 takes a fork
+4 ms 3 takes a fork
+4 ms 3 is eating
+5 ms 5 takes a fork
+5 ms 5 takes a fork
+5 ms 5 is eating
+6 ms 7 takes a fork
+6 ms 7 takes a fork
+6 ms 7 is eating
+7 ms 9 takes a fork
+7 ms 9 takes a fork
+7 ms 9 is eating
+8 ms 11 takes a fork
+8 ms 11 takes a fork
+8 ms 11 is eating
+10 ms 13 takes a fork
+10 ms 13 takes a fork
+10 ms 13 is eating
+11 ms 15 takes a fork
+11 ms 15 takes a fork
+11 ms 15 is eating
+12 ms 17 takes a fork
+12 ms 17 takes a fork
+12 ms 17 is eating
+13 ms 19 takes a fork
+13 ms 19 takes a fork
+13 ms 19 is eating
+14 ms 21 takes a fork
+14 ms 21 takes a fork
+14 ms 21 is eating
+16 ms 23 takes a fork
+16 ms 23 takes a fork
+16 ms 23 is eating
+17 ms 25 takes a fork
+17 ms 25 takes a fork
+17 ms 25 is eating
+18 ms 27 takes a fork
+18 ms 27 takes a fork
+18 ms 27 is eating
+19 ms 29 takes a fork
+19 ms 29 takes a fork
+19 ms 29 is eating
+21 ms 31 takes a fork
+21 ms 31 takes a fork
+21 ms 31 is eating
+22 ms 33 takes a fork
+22 ms 33 takes a fork
+22 ms 33 is eating
+23 ms 35 takes a fork
+23 ms 35 takes a fork
+23 ms 35 is eating
+24 ms 37 takes a fork
+24 ms 37 takes a fork
+24 ms 37 is eating
+26 ms 39 takes a fork
+26 ms 39 takes a fork
+26 ms 39 is eating
+27 ms 41 takes a fork
+27 ms 41 takes a fork
+27 ms 41 is eating
+28 ms 43 takes a fork
+28 ms 43 takes a fork
+28 ms 43 is eating
+29 ms 45 takes a fork
+29 ms 45 takes a fork
+29 ms 45 is eating
+30 ms 47 takes a fork
+30 ms 47 takes a fork
+30 ms 47 is eating
+32 ms 49 takes a fork
+32 ms 49 takes a fork
+32 ms 49 is eating
+33 ms 51 takes a fork
+33 ms 51 takes a fork
+33 ms 51 is eating
+34 ms 53 takes a fork
+34 ms 53 takes a fork
+34 ms 53 is eating
+35 ms 55 takes a fork
+35 ms 55 takes a fork
+35 ms 55 is eating
+37 ms 57 takes a fork
+37 ms 57 takes a fork
+37 ms 57 is eating
+38 ms 59 takes a fork
+38 ms 59 takes a fork
+38 ms 59 is eating
+39 ms 61 takes a fork
+39 ms 61 takes a fork
+39 ms 61 is eating
+40 ms 63 takes a fork
+40 ms 63 takes a fork
+40 ms 63 is eating
+42 ms 65 takes a fork
+42 ms 65 takes a fork
+42 ms 65 is eating
+43 ms 67 takes a fork
+43 ms 67 takes a fork
+43 ms 67 is eating
+44 ms 69 takes a fork
+44 ms 69 takes a fork
+44 ms 69 is eating
+45 ms 71 takes a fork
+45 ms 71 takes a fork
+45 ms 71 is eating
+46 ms 73 takes a fork
+46 ms 73 takes a fork
+47 ms 73 is eating
+48 ms 75 takes a fork
+48 ms 75 takes a fork
+48 ms 75 is eating
+49 ms 77 takes a fork
+49 ms 77 takes a fork
+49 ms 77 is eating
+50 ms 79 takes a fork
+51 ms 79 takes a fork
+51 ms 79 is eating
+52 ms 81 takes a fork
+52 ms 81 takes a fork
+52 ms 81 is eating
+53 ms 83 takes a fork
+53 ms 83 takes a fork
+53 ms 83 is eating
+54 ms 85 takes a fork
+54 ms 85 takes a fork
+54 ms 85 is eating
+56 ms 87 takes a fork
+56 ms 87 takes a fork
+56 ms 87 is eating
+57 ms 89 takes a fork
+57 ms 89 takes a fork
+57 ms 89 is eating
+58 ms 91 takes a fork
+58 ms 91 takes a fork
+58 ms 91 is eating
+59 ms 93 takes a fork
+59 ms 93 takes a fork
+59 ms 93 is eating
+61 ms 95 takes a fork
+61 ms 95 takes a fork
+61 ms 95 is eating
+62 ms 1 is spleeping
+62 ms 2 takes a fork
+62 ms 97 takes a fork
+62 ms 97 takes a fork
+62 ms 97 is eating
+63 ms 99 takes a fork
+63 ms 99 takes a fork
+63 ms 99 is eating
+64 ms 4 takes a fork
+64 ms 2 takes a fork
+64 ms 2 is eating
+64 ms 3 is spleeping
+65 ms 5 is spleeping
+65 ms 4 takes a fork
+65 ms 4 is eating
+65 ms 6 takes a fork
+66 ms 7 is spleeping
+66 ms 6 takes a fork
+66 ms 6 is eating
+66 ms 8 takes a fork
+67 ms 9 is spleeping
+67 ms 10 takes a fork
+67 ms 8 takes a fork
+67 ms 8 is eating
+68 ms 11 is spleeping
+68 ms 12 takes a fork
+68 ms 10 takes a fork
+68 ms 10 is eating
+70 ms 13 is spleeping
+70 ms 14 takes a fork
+70 ms 12 takes a fork
+70 ms 12 is eating
+71 ms 15 is spleeping
+71 ms 16 takes a fork
+71 ms 14 takes a fork
+71 ms 14 is eating
+72 ms 17 is spleeping
+72 ms 18 takes a fork
+72 ms 16 takes a fork
+72 ms 16 is eating
+73 ms 19 is spleeping
+73 ms 20 takes a fork
+73 ms 18 takes a fork
+73 ms 18 is eating
+74 ms 21 is spleeping
+74 ms 20 takes a fork
+74 ms 20 is eating
+74 ms 22 takes a fork
+76 ms 23 is spleeping
+76 ms 24 takes a fork
+76 ms 22 takes a fork
+76 ms 22 is eating
+77 ms 25 is spleeping
+77 ms 24 takes a fork
+77 ms 24 is eating
+77 ms 26 takes a fork
+78 ms 27 is spleeping
+78 ms 28 takes a fork
+78 ms 26 takes a fork
+78 ms 26 is eating
+79 ms 30 takes a fork
+79 ms 28 takes a fork
+79 ms 28 is eating
+79 ms 29 is spleeping
+81 ms 31 is spleeping
+81 ms 32 takes a fork
+81 ms 30 takes a fork
+81 ms 30 is eating
+82 ms 33 is spleeping
+82 ms 34 takes a fork
+82 ms 32 takes a fork
+82 ms 32 is eating
+83 ms 35 is spleeping
+83 ms 36 takes a fork
+83 ms 34 takes a fork
+83 ms 34 is eating
+84 ms 37 is spleeping
+84 ms 38 takes a fork
+84 ms 36 takes a fork
+84 ms 36 is eating
+86 ms 39 is spleeping
+86 ms 40 takes a fork
+86 ms 38 takes a fork
+86 ms 38 is eating
+87 ms 41 is spleeping
+87 ms 40 takes a fork
+87 ms 40 is eating
+87 ms 42 takes a fork
+88 ms 43 is spleeping
+88 ms 42 takes a fork
+88 ms 42 is eating
+88 ms 44 takes a fork
+89 ms 45 is spleeping
+89 ms 46 takes a fork
+89 ms 44 takes a fork
+89 ms 44 is eating
+90 ms 47 is spleeping
+90 ms 48 takes a fork
+90 ms 46 takes a fork
+90 ms 46 is eating
+92 ms 49 is spleeping
+92 ms 48 takes a fork
+92 ms 48 is eating
+92 ms 50 takes a fork
+93 ms 51 is spleeping
+93 ms 50 takes a fork
+93 ms 50 is eating
+93 ms 52 takes a fork
+94 ms 53 is spleeping
+94 ms 52 takes a fork
+94 ms 52 is eating
+94 ms 54 takes a fork
+95 ms 55 is spleeping
+95 ms 54 takes a fork
+95 ms 54 is eating
+95 ms 56 takes a fork
+97 ms 57 is spleeping
+97 ms 56 takes a fork
+97 ms 56 is eating
+97 ms 58 takes a fork
+98 ms 59 is spleeping
+98 ms 60 takes a fork
+98 ms 58 takes a fork
+98 ms 58 is eating
+99 ms 61 is spleeping
+99 ms 60 takes a fork
+99 ms 60 is eating
+99 ms 62 takes a fork
+100 ms 63 is spleeping
+100 ms 64 takes a fork
+100 ms 62 takes a fork
+100 ms 62 is eating
+102 ms 65 is spleeping
+102 ms 66 takes a fork
+102 ms 64 takes a fork
+102 ms 64 is eating
+103 ms 67 is spleeping
+103 ms 68 takes a fork
+103 ms 66 takes a fork
+103 ms 66 is eating
+104 ms 69 is spleeping
+104 ms 70 takes a fork
+104 ms 68 takes a fork
+104 ms 68 is eating
+105 ms 71 is spleeping
+105 ms 70 takes a fork
+105 ms 70 is eating
+105 ms 72 takes a fork
+107 ms 73 is spleeping
+107 ms 74 takes a fork
+107 ms 72 takes a fork
+107 ms 72 is eating
+108 ms 75 is spleeping
+108 ms 76 takes a fork
+108 ms 74 takes a fork
+108 ms 74 is eating
+109 ms 77 is spleeping
+109 ms 78 takes a fork
+109 ms 76 takes a fork
+109 ms 76 is eating
+111 ms 79 is spleeping
+111 ms 80 takes a fork
+111 ms 78 takes a fork
+111 ms 78 is eating
+112 ms 81 is spleeping
+112 ms 82 takes a fork
+112 ms 80 takes a fork
+112 ms 80 is eating
+113 ms 83 is spleeping
+113 ms 84 takes a fork
+113 ms 82 takes a fork
+113 ms 82 is eating
+114 ms 85 is spleeping
+114 ms 86 takes a fork
+114 ms 84 takes a fork
+114 ms 84 is eating
+116 ms 87 is spleeping
+116 ms 88 takes a fork
+116 ms 86 takes a fork
+116 ms 86 is eating
+117 ms 89 is spleeping
+117 ms 90 takes a fork
+117 ms 88 takes a fork
+117 ms 88 is eating
+118 ms 91 is spleeping
+118 ms 92 takes a fork
+118 ms 90 takes a fork
+118 ms 90 is eating
+119 ms 93 is spleeping
+119 ms 92 takes a fork
+119 ms 92 is eating
+119 ms 94 takes a fork
+121 ms 95 is spleeping
+121 ms 96 takes a fork
+121 ms 94 takes a fork
+121 ms 94 is eating
+122 ms 1 is thinking
+122 ms 1 takes a fork
+122 ms 97 is spleeping
+122 ms 98 takes a fork
+122 ms 96 takes a fork
+122 ms 96 is eating
+123 ms 99 is spleeping
+123 ms 100 takes a fork
+123 ms 98 takes a fork
+123 ms 98 is eating
+124 ms 2 is spleeping
+124 ms 1 takes a fork
+124 ms 1 is eating
+124 ms 3 is thinking
+124 ms 3 takes a fork
+125 ms 4 is spleeping
+125 ms 5 is thinking
+125 ms 5 takes a fork
+125 ms 3 takes a fork
+125 ms 3 is eating
+126 ms 6 is spleeping
+126 ms 5 takes a fork
+126 ms 5 is eating
+126 ms 7 is thinking
+126 ms 7 takes a fork
+127 ms 9 is thinking
+127 ms 8 is spleeping
+127 ms 9 takes a fork
+127 ms 7 takes a fork
+127 ms 7 is eating
+128 ms 10 is spleeping
+128 ms 9 takes a fork
+128 ms 9 is eating
+128 ms 11 is thinking
+128 ms 11 takes a fork
+130 ms 13 is thinking
+130 ms 12 is spleeping
+130 ms 13 takes a fork
+130 ms 11 takes a fork
+130 ms 11 is eating
+131 ms 15 is thinking
+131 ms 14 is spleeping
+131 ms 15 takes a fork
+131 ms 13 takes a fork
+131 ms 13 is eating
+132 ms 17 is thinking
+132 ms 17 takes a fork
+132 ms 15 takes a fork
+132 ms 15 is eating
+132 ms 16 is spleeping
+133 ms 18 is spleeping
+133 ms 19 is thinking
+133 ms 19 takes a fork
+133 ms 17 takes a fork
+133 ms 17 is eating
+134 ms 20 is spleeping
+134 ms 21 is thinking
+134 ms 21 takes a fork
+134 ms 19 takes a fork
+134 ms 19 is eating
+136 ms 23 is thinking
+136 ms 23 takes a fork
+136 ms 22 is spleeping
+136 ms 21 takes a fork
+136 ms 21 is eating
+137 ms 25 is thinking
+137 ms 24 is spleeping
+137 ms 25 takes a fork
+137 ms 23 takes a fork
+137 ms 23 is eating
+138 ms 26 is spleeping
+138 ms 25 takes a fork
+138 ms 25 is eating
+138 ms 27 is thinking
+138 ms 27 takes a fork
+139 ms 28 is spleeping
+139 ms 29 is thinking
+139 ms 29 takes a fork
+139 ms 27 takes a fork
+139 ms 27 is eating
+141 ms 31 is thinking
+141 ms 30 is spleeping
+141 ms 31 takes a fork
+141 ms 29 takes a fork
+141 ms 29 is eating
+142 ms 32 is spleeping
+142 ms 33 is thinking
+142 ms 33 takes a fork
+142 ms 31 takes a fork
+142 ms 31 is eating
+143 ms 35 is thinking
+143 ms 34 is spleeping
+143 ms 35 takes a fork
+143 ms 33 takes a fork
+143 ms 33 is eating
+144 ms 36 is spleeping
+144 ms 35 takes a fork
+144 ms 35 is eating
+144 ms 37 is thinking
+144 ms 37 takes a fork
+146 ms 38 is spleeping
+146 ms 39 is thinking
+146 ms 39 takes a fork
+146 ms 37 takes a fork
+146 ms 37 is eating
+147 ms 40 is spleeping
+147 ms 39 takes a fork
+147 ms 39 is eating
+147 ms 41 is thinking
+147 ms 41 takes a fork
+148 ms 43 is thinking
+148 ms 43 takes a fork
+148 ms 41 takes a fork
+148 ms 41 is eating
+148 ms 42 is spleeping
+149 ms 44 is spleeping
+149 ms 43 takes a fork
+149 ms 43 is eating
+149 ms 45 is thinking
+149 ms 45 takes a fork
+150 ms 47 is thinking
+150 ms 46 is spleeping
+150 ms 47 takes a fork
+150 ms 45 takes a fork
+150 ms 45 is eating
+152 ms 49 is thinking
+152 ms 48 is spleeping
+152 ms 49 takes a fork
+152 ms 47 takes a fork
+152 ms 47 is eating
+153 ms 51 is thinking
+153 ms 50 is spleeping
+153 ms 51 takes a fork
+153 ms 49 takes a fork
+153 ms 49 is eating
+154 ms 52 is spleeping
+154 ms 53 is thinking
+154 ms 53 takes a fork
+154 ms 51 takes a fork
+154 ms 51 is eating
+155 ms 54 is spleeping
+155 ms 55 is thinking
+155 ms 55 takes a fork
+155 ms 53 takes a fork
+155 ms 53 is eating
+157 ms 56 is spleeping
+157 ms 57 is thinking
+157 ms 57 takes a fork
+157 ms 55 takes a fork
+157 ms 55 is eating
+158 ms 59 is thinking
+158 ms 58 is spleeping
+158 ms 59 takes a fork
+158 ms 57 takes a fork
+158 ms 57 is eating
+159 ms 61 is thinking
+159 ms 61 takes a fork
+159 ms 59 takes a fork
+159 ms 59 is eating
+159 ms 60 is spleeping
+160 ms 62 is spleeping
+160 ms 63 is thinking
+160 ms 63 takes a fork
+160 ms 61 takes a fork
+160 ms 61 is eating
+162 ms 65 is thinking
+162 ms 64 is spleeping
+162 ms 63 takes a fork
+162 ms 63 is eating
+162 ms 65 takes a fork
+163 ms 66 is spleeping
+163 ms 65 takes a fork
+163 ms 65 is eating
+163 ms 67 is thinking
+163 ms 67 takes a fork
+164 ms 68 is spleeping
+164 ms 69 is thinking
+164 ms 69 takes a fork
+164 ms 67 takes a fork
+164 ms 67 is eating
+165 ms 71 is thinking
+165 ms 71 takes a fork
+165 ms 69 takes a fork
+165 ms 69 is eating
+165 ms 70 is spleeping
+167 ms 72 is spleeping
+167 ms 73 is thinking
+167 ms 73 takes a fork
+167 ms 71 takes a fork
+167 ms 71 is eating
+168 ms 75 is thinking
+168 ms 75 takes a fork
+168 ms 74 is spleeping
+168 ms 73 takes a fork
+168 ms 73 is eating
+169 ms 77 is thinking
+169 ms 76 is spleeping
+169 ms 77 takes a fork
+169 ms 75 takes a fork
+169 ms 75 is eating
+171 ms 79 is thinking
+171 ms 78 is spleeping
+171 ms 79 takes a fork
+171 ms 77 takes a fork
+171 ms 77 is eating
+172 ms 81 is thinking
+172 ms 80 is spleeping
+172 ms 81 takes a fork
+172 ms 79 takes a fork
+172 ms 79 is eating
+173 ms 83 is thinking
+173 ms 83 takes a fork
+173 ms 82 is spleeping
+173 ms 81 takes a fork
+173 ms 81 is eating
+174 ms 84 is spleeping
+174 ms 83 takes a fork
+174 ms 83 is eating
+174 ms 85 is thinking
+174 ms 85 takes a fork
+176 ms 87 is thinking
+176 ms 87 takes a fork
+176 ms 86 is spleeping
+176 ms 85 takes a fork
+176 ms 85 is eating
+177 ms 89 is thinking
+177 ms 88 is spleeping
+177 ms 87 takes a fork
+177 ms 87 is eating
+177 ms 89 takes a fork
+178 ms 90 is spleeping
+178 ms 89 takes a fork
+178 ms 89 is eating
+178 ms 91 is thinking
+178 ms 91 takes a fork
+179 ms 92 is spleeping
+179 ms 91 takes a fork
+179 ms 91 is eating
+179 ms 93 is thinking
+179 ms 93 takes a fork
+181 ms 95 is thinking
+181 ms 94 is spleeping
+181 ms 95 takes a fork
+181 ms 93 takes a fork
+181 ms 93 is eating
+182 ms 96 is spleeping
+182 ms 95 takes a fork
+182 ms 95 is eating
+182 ms 97 is thinking
+182 ms 97 takes a fork
+183 ms 99 is thinking
+183 ms 98 is spleeping
+183 ms 99 takes a fork
+183 ms 97 takes a fork
+183 ms 97 is eating
+184 ms 1 is spleeping
+184 ms 2 is thinking
+184 ms 2 takes a fork
+184 ms 100 takes a fork
+184 ms 100 is eating
+185 ms 4 is thinking
+185 ms 3 is spleeping
+185 ms 4 takes a fork
+185 ms 2 takes a fork
+185 ms 2 is eating
+186 ms 6 is thinking
+186 ms 5 is spleeping
+186 ms 6 takes a fork
+186 ms 4 takes a fork
+186 ms 4 is eating
+187 ms 8 is thinking
+187 ms 8 takes a fork
+187 ms 6 takes a fork
+187 ms 6 is eating
+187 ms 7 is spleeping
+188 ms 10 is thinking
+188 ms 9 is spleeping
+188 ms 10 takes a fork
+188 ms 8 takes a fork
+188 ms 8 is eating
+190 ms 12 is thinking
+190 ms 11 is spleeping
+190 ms 12 takes a fork
+190 ms 10 takes a fork
+190 ms 10 is eating
+191 ms 14 is thinking
+191 ms 13 is spleeping
+191 ms 14 takes a fork
+191 ms 12 takes a fork
+191 ms 12 is eating
+192 ms 15 is spleeping
+192 ms 16 is thinking
+192 ms 16 takes a fork
+192 ms 14 takes a fork
+192 ms 14 is eating
+193 ms 18 is thinking
+193 ms 17 is spleeping
+193 ms 18 takes a fork
+193 ms 16 takes a fork
+193 ms 16 is eating
+194 ms 19 is spleeping
+194 ms 18 takes a fork
+194 ms 18 is eating
+194 ms 20 is thinking
+194 ms 20 takes a fork
+195 ms 1 died
