@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/30 19:30:26 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/31 17:18:55 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*death_cycle(void *philo)
 		browse = (t_philo *)philo;
 		while (info->philo_count > 0)
 		{
-			if (((get_current_time_ms() - browse->time_last_meal)) + 0
+			if (((get_current_time_ms() - browse->time_last_meal)) + 2
 				>= info->time_to_die && !browse->status)
 				break ;
 			browse = browse->next;
@@ -42,7 +42,7 @@ static void	eat_action(t_philo *philo, t_info *info)
 	pthread_mutex_lock(&philo->next->fork);
 	print_msg(philo->pos, "has taken a fork", info);
 	philo->status = 1;
-	philo->time_last_meal = get_current_time_ms() + 2;
+	philo->time_last_meal = get_current_time_ms();
 	print_msg(philo->pos, "is eating", info);
 	if (info->opt_min_meals != -1)
 		philo->number_of_meals++;

@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/30 19:36:24 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/10/31 17:30:57 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	print_msg(t_count pos, char *msg, t_info *info)
 	if (info->status == 1 && info->philo_count > 0)
 	{
 		printf("%i %i %s\n",
-			get_current_time_ms() - info->start_time, pos, msg);
+			(get_current_time_ms() - info->start_time) + 2, pos, msg);
 	}
 	else
 		info->philo_count = 0;
@@ -57,7 +57,7 @@ int	main(int ac, char **av)
 	while (i-- > 0)
 	{
 		pthread_create(&philo->life, NULL, life_cycle, (void *)philo);
-		usleep(5000);
+		usleep(50);
 		pthread_detach(philo->life);
 		philo = philo->next;
 	}
