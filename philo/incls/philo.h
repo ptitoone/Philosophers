@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/30 16:15:47 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/01 16:35:21 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ char		*ft_ltoa(long n);
 t_count		get_current_time_ms(void);
 void		wait_action(t_count msec_wait);
 
+void		*spawn_cycle(void *philo);
 void		*life_cycle(void *philo);
 void		*death_cycle(void *philo);
 void		print_msg(t_count pos, char *msg, t_info *info);

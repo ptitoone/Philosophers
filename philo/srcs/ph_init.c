@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/30 16:17:05 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/01 15:15:31 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ t_ribool	init(int ac, char **av, t_info *info, t_philo **philo)
 		return (throw_error(ERR_INV_COUNT_RANGE));
 	else if (!init_philos(info, philo))
 		return (throw_error(ERR_MALLOC));
+	spawn_cycle(info);
 	life_cycle(info);
 	death_cycle(info);
 	return (T_TRUE);

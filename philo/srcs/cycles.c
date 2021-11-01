@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:46:17 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/31 17:18:55 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/01 16:36:13 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,14 @@ void	*death_cycle(void *philo)
 		browse = (t_philo *)philo;
 		while (info->philo_count > 0)
 		{
-			if (((get_current_time_ms() - browse->time_last_meal)) + 2
+			if ((get_current_time_ms() - browse->time_last_meal)
 				>= info->time_to_die && !browse->status)
-				break ;
+			{
+				print_msg(browse->pos, "died", info);
+				info->philo_count = 0;
+			}
 			browse = browse->next;
 		}
-		print_msg(browse->pos, "died", info);
-		info->status = 0;
 	}
 	return (NULL);
 }
@@ -53,10 +54,10 @@ static void	eat_action(t_philo *philo, t_info *info)
 		pthread_mutex_unlock(&info->philo_decr_lock);
 	}
 	wait_action(info->time_to_eat);
-	philo->status = 0;
-	print_msg(((t_philo *)philo)->pos, "is sleeping", info);
 	pthread_mutex_unlock(&philo->fork);
 	pthread_mutex_unlock(&philo->next->fork);
+	philo->status = 0;
+	print_msg(((t_philo *)philo)->pos, "is sleeping", info);
 }
 
 void	*life_cycle(void *philo)

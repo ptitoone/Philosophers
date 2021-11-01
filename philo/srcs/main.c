@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/31 17:30:57 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/01 16:37:04 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,35 +33,51 @@ t_ribool	throw_error(char *err_msg)
 void	print_msg(t_count pos, char *msg, t_info *info)
 {
 	pthread_mutex_lock(&info->msg_lock);
-	if (info->status == 1 && info->philo_count > 0)
+	if (info->philo_count > 0)
 	{
 		printf("%i %i %s\n",
-			(get_current_time_ms() - info->start_time) + 2, pos, msg);
+			(get_current_time_ms() - info->start_time), pos, msg);
 	}
 	else
 		info->philo_count = 0;
 	pthread_mutex_unlock(&info->msg_lock);
 }
 
+void	*spawn_cycle(void *philo)
+{
+	static t_info	*info;
+	pthread_t		death;
+	int				i;
+
+	if (!info)
+		info = philo;
+	else
+	{
+		i = info->philo_count;
+		info->start_time = get_current_time_ms();
+		while (i-- > 0)
+		{
+			pthread_create(&((t_philo *)philo)->life, NULL, life_cycle, philo);
+			usleep(200);
+			philo = ((t_philo *)philo)->next;
+		}
+		pthread_create(&death, NULL, death_cycle, philo);
+		while (info->philo_count > 0)
+			;
+		pthread_mutex_lock(&info->msg_lock);
+	}
+	return (NULL);
+}
+
 int	main(int ac, char **av)
 {
 	t_info		info;
 	t_philo		*philo;
-	pthread_t	death;
-	int			i;
+	pthread_t	spawn;
 
 	if (!init(ac - 1, av + 1, &info, &philo))
 		return (EXIT_FAILURE);
-	i = info.philo_count;
-	info.start_time = get_current_time_ms();
-	while (i-- > 0)
-	{
-		pthread_create(&philo->life, NULL, life_cycle, (void *)philo);
-		usleep(50);
-		pthread_detach(philo->life);
-		philo = philo->next;
-	}
-	pthread_create(&death, NULL, death_cycle, philo);
-	pthread_join(death, NULL);
+	pthread_create(&spawn, NULL, spawn_cycle, (void *)philo);
+	pthread_join(spawn, NULL);
 	return (EXIT_SUCCESS);
 }
