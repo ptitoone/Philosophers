@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:51:35 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 17:40:07 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/01 17:36:44 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,62 +37,62 @@ t_ribool	ft_long_overflow(const char *src)
 	return (T_TRUE);
 }
 
-static void	ft_ltoa_init(long n, long *clclen, int *strlen, int *posinega)
+static void	ft_ltoa_init(long n, long *clclen, int *len, int *polarity)
 {
 	*clclen = n;
-	*posinega = 1;
-	*strlen = 2;
+	*polarity = 1;
+	*len = 2;
 	if (n < 0)
-		*posinega = -1;
+		*polarity = -1;
 	if (n < 0)
-		*strlen = 3;
+		*len = 3;
 }
 
 char	*ft_ltoa(long n)
 {
-	char	*nbrstr;
+	char	*str;
 	long	clclen;
-	int		strlen;
-	int		posinega;
+	int		len;
+	int		polarity;
 
-	ft_ltoa_init(n, &clclen, &strlen, &posinega);
+	ft_ltoa_init(n, &clclen, &len, &polarity);
 	clclen /= 10;
 	while (clclen)
 	{
 		clclen /= 10;
-		strlen++;
+		len++;
 	}
-	nbrstr = (char *)malloc(strlen * sizeof(char));
-	if (!nbrstr)
+	str = (char *)malloc(len * sizeof(char));
+	if (!str)
 		return (0);
-	nbrstr[--strlen] = '\0';
-	while ((posinega < 0 && --strlen > 0) || (posinega > 0 && --strlen > -1))
+	str[--len] = '\0';
+	while ((polarity < 0 && --len > 0) || (polarity > 0 && --len > -1))
 	{
-		nbrstr[strlen] = (((n % 10) * posinega) + '0');
+		str[len] = (((n % 10) * polarity) + '0');
 		n /= 10;
 	}
-	nbrstr[0] = nbrstr[0];
-	if (posinega < 0)
-		nbrstr[0] = '-';
-	return (nbrstr);
+	str[0] = str[0];
+	if (polarity < 0)
+		str[0] = '-';
+	return (str);
 }
 
 long int	ft_atol(const char *str)
 {
-	int			strind;
-	int			posinega;
-	long int	result;
+	int			i;
+	int			polarity;
+	long int	ret_val;
 
-	strind = 0;
-	posinega = 1;
-	while (str[strind] == ' ' || (str[strind] >= 9 && str[strind] <= 13))
-		strind++;
-	if (str[strind] == '-')
-		posinega = -1;
-	if (!(str[strind] == '-') && !(str[strind] == '+'))
-		strind--;
-	result = 0;
-	while (str[++strind] >= '0' && str[strind] <= '9')
-		result = (result * 10) + ((str[strind] - '0') * posinega);
-	return (result);
+	i = 0;
+	polarity = 1;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
+		polarity = -1;
+	if (!(str[i] == '-') && !(str[i] == '+'))
+		i--;
+	ret_val = 0;
+	while (str[++i] >= '0' && str[i] <= '9')
+		ret_val = (ret_val * 10) + ((str[i] - '0') * polarity);
+	return (ret_val);
 }

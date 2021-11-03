@@ -6,13 +6,13 @@
 /*   By: akotzky <akotzky@42nice.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 17:31:58 by akotzky           #+#    #+#             */
-/*   Updated: 2021/10/26 17:32:26 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/03 16:01:29 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-t_count	get_current_time_ms(void)
+t_count	get_time(void)
 {
 	struct timeval	tv_current;
 
@@ -24,7 +24,7 @@ void	wait_action(t_count msec_wait)
 {
 	t_count	tv_start;
 
-	tv_start = get_current_time_ms();
-	while (msec_wait > get_current_time_ms() - tv_start)
+	tv_start = get_time();
+	while (msec_wait > get_time() - tv_start)
 		usleep(msec_wait);
 }

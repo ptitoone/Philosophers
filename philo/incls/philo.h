@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/11/01 16:35:21 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/03 16:12:29 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,12 @@ typedef struct s_philo	t_philo;
 typedef enum e_ribool
 {
 	T_FALSE,
-	T_TRUE,
-	T_MAYBE
+	T_TRUE
 }				t_ribool;
 
 struct	s_philo
 {
 	pthread_t		life;
-	int				status;
 	pthread_mutex_t	fork;
 	t_count			pos;
 	t_count			time_last_meal;
@@ -52,8 +50,7 @@ typedef struct s_info
 {
 	pthread_mutex_t	msg_lock;
 	pthread_mutex_t	philo_decr_lock;
-	t_count			start_time;
-	int				status;
+	t_count			st_time;
 	int				philo_count;
 	t_count			time_to_die;
 	t_count			time_to_eat;
@@ -68,7 +65,7 @@ int			ft_strcmp(char const *s1, char const *s2);
 t_ribool	ft_long_overflow(const char *src);
 long int	ft_atol(const char *str);
 char		*ft_ltoa(long n);
-t_count		get_current_time_ms(void);
+t_count		get_time(void);
 void		wait_action(t_count msec_wait);
 
 void		*spawn_cycle(void *philo);
