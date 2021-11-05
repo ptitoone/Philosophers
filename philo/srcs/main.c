@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:33:48 by akotzky           #+#    #+#             */
-/*   Updated: 2021/11/03 16:12:54 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/05 11:14:53 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ void	print_msg(t_count pos, char *msg, t_info *info)
 {
 	int	time;
 
-	pthread_mutex_lock(&info->msg_lock);
 	time = get_time() - info->st_time;
 	if (time >= 0 && time < 500000 && info->philo_count > 0)
 	{
+		pthread_mutex_lock(&info->msg_lock);
 		printf("%i %i %s\n", time, pos, msg);
 		if (*msg == 'd')
 			info->philo_count = 0;
