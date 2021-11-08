@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:27:28 by akotzky           #+#    #+#             */
-/*   Updated: 2021/11/03 15:36:43 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/08 16:54:03 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ static t_ribool	init_info(int ac, char **av, t_info *info)
 	long long	num;
 
 	i = -1;
-	pthread_mutex_init(&info->msg_lock, NULL);
-	pthread_mutex_init(&info->philo_decr_lock, NULL);
 	info->opt_min_meals = -1;
+	info->start = 0;
 	while (++i < ac && av[i])
 	{
 		num = ft_atol(av[i]);
@@ -51,6 +50,7 @@ static t_philo	*new_philo(int pos)
 		new->pos = pos;
 		new->next = NULL;
 		new->time_last_meal = 0;
+		new->status = 0;
 		new->number_of_meals = 0;
 	}
 	return (new);
@@ -85,6 +85,9 @@ t_ribool	init(int ac, char **av, t_info *info, t_philo **philo)
 		return (throw_error(ERR_INV_COUNT_RANGE));
 	else if (!init_philos(info, philo))
 		return (throw_error(ERR_MALLOC));
+	pthread_mutex_init(&info->init_lock, NULL);
+	pthread_mutex_init(&info->msg_lock, NULL);
+	pthread_mutex_init(&info->philo_decr_lock, NULL);
 	spawn_cycle(info);
 	life_cycle(info);
 	death_cycle(info);

@@ -6,7 +6,7 @@
 /*   By: akotzky <akotzky@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:03 by akotzky           #+#    #+#             */
-/*   Updated: 2021/11/05 11:14:38 by akotzky          ###   ########.fr       */
+/*   Updated: 2021/11/08 14:11:50 by akotzky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,18 @@ struct	s_philo
 	t_count			pos;
 	t_count			time_last_meal;
 	int				number_of_meals;
+	int				status;
 	t_philo			*next;
 };
 
 typedef struct s_info
 {
+	pthread_mutex_t	init_lock;
 	pthread_mutex_t	msg_lock;
 	pthread_mutex_t	philo_decr_lock;
 	t_count			st_time;
 	int				philo_count;
+	int				start;
 	t_count			time_to_die;
 	t_count			time_to_eat;
 	t_count			time_to_sleep;
