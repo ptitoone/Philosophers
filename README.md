@@ -1,8 +1,12 @@
-# philosophers
+# Philosophers
 
-### [C]
+### Multi threadeding
 
-### Multi threaded program
+<p align="center">
+  <img src="https://i.imgur.com/912mLZ0.png" height="300px" width="300px" alt="Round table representation" />
+</p>
+
+## Rules
 
 - One or more philosophers sit at a round table.
 There is a large bowl of spaghetti in the middle of the table.
@@ -28,11 +32,15 @@ pher number N + 1.
 
 ## Usage
 
-Compile the program with `make all`, then lauch the program as below:
+Compile with `make all`, then lauch the program as below:
 
 ```
 ./philo number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
 ```
+
+Note that the performance of the program depends on the CPU load.
+
+You can run the `check_philo_meals.sh` to verify if a philo died before having all his meals.
 
 - **number_of_philosophers**: The number of philosophers and also the number
 of forks.
@@ -47,8 +55,14 @@ philosophers have eaten at least number_of_times_each_philosopher_must_eat
 times, the simulation stops. If not specified, the simulation stops when a
 philosopher dies.
 
-#### Skills gained:
+<p align="center">
+  <img src="https://i.imgur.com/6BLG1N7.png" alt="Program preview" />
+</p>
 
-Understanding of threads, concurrency, data race and mutex locks.
+## Skills gained
+
+Understanding of threads, data races and mutex locks.
+
+## Final Grade
 
 ![alt text](https://i.imgur.com/wtxZeF1.png "Final grade 100/100")
